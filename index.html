@@ -43,7 +43,6 @@
       .tracking-widest-custom {
         letter-spacing: 0.15em;
       }
-      /* Smooth transitions for all interactive elements */
       * {
         transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
       }
@@ -55,4 +54,15 @@
       }
       @keyframes reveal {
         from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0);
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-reveal {
+        animation: reveal 0.8s cubic-bezier(0.2, 0, 0, 1) forwards;
+      }
+    </style>
+  </head>
+  <body class="antialiased overflow-x-hidden selection:bg-black selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
