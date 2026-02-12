@@ -1,5 +1,7 @@
 {
-  "name": "Royal Leather Exports - Premium Landing Page",
-  "description": "A high-end, monochromatic landing page for a luxury leather export house featuring an AI design playground and clean minimalist aesthetics.",
-  "requestFramePermissions": []
+  "name": "SLB OVERSEAS - Premium Leather & Canvas Exports",
+  "description": "Globally trusted manufacturer and exporter of premium leather and canvas bags, specializing in OEM and private-label solutions from Jodhpur, India.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
 }

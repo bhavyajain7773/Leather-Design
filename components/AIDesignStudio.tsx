@@ -8,10 +8,16 @@ const AIDesignStudio: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [aiInsight, setAiInsight] = useState<string>('');
 
+  const finishImages = {
+    Matte: 'https://images.unsplash.com/photo-1517423568366-8b83523034fd?auto=format&fit=crop&q=80&w=1200',
+    Glossy: 'https://images.unsplash.com/photo-1627384113743-6bd5a479fffd?auto=format&fit=crop&q=80&w=1200',
+    Pebbled: 'https://images.unsplash.com/photo-1524289286702-f07229da36f5?auto=format&fit=crop&q=80&w=1200'
+  };
+
   const generateInsight = async (selectedPatina: string) => {
     setLoading(true);
     try {
-      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
       const response = await ai.models.generateContent({
         model: 'gemini-3-flash-preview',
         contents: `Characterize ${selectedPatina} leather for a luxury export client in 10-12 punchy words.`,
@@ -25,14 +31,10 @@ const AIDesignStudio: React.FC = () => {
   };
 
   return (
-    <section id="design-studio" className="py-32 bg-black text-white rounded-[4rem] mx-6 my-12 overflow-hidden">
+    <section id="design-studio" className="py-16 bg-black text-white rounded-[4rem] mx-6 my-4 overflow-hidden">
       <div className="max-w-7xl mx-auto px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <div>
-            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 border border-white/10 rounded-full mb-8">
-              <Cpu size={12} className="text-neutral-500" />
-              <span className="text-[9px] font-black uppercase tracking-widest-custom text-neutral-400">Design Studio v2.0</span>
-            </div>
             <h2 className="text-4xl md:text-6xl font-black mb-10 leading-[1.1] tracking-tight-custom italic">
               Digital <br /><span className="text-neutral-700">Leathercraft.</span>
             </h2>
@@ -72,12 +74,10 @@ const AIDesignStudio: React.FC = () => {
           <div className="relative">
             <div className="aspect-[4/5] md:aspect-square bg-neutral-900 rounded-[3rem] overflow-hidden border border-white/10 group shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&q=80&w=1200" 
-                alt="Product Simulation" 
-                className={`w-full h-full object-cover transition-all duration-1000 ${
-                  patina === 'Matte' ? 'brightness-75' : 
-                  patina === 'Glossy' ? 'contrast-125 saturate-150' : 'contrast-110 saturate-125'
-                }`}
+                key={patina}
+                src={finishImages[patina]} 
+                alt={`${patina} Leather Product Simulation`} 
+                className="w-full h-full object-cover transition-all duration-1000 animate-reveal"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60" />
               

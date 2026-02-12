@@ -10,7 +10,7 @@ const Stats: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-8 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-2 lg:grid-cols-4 border border-neutral-100 rounded-[2.5rem] overflow-hidden divide-x divide-y md:divide-y-0 divide-neutral-100">
           {stats.map((stat, idx) => (

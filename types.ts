@@ -2,7 +2,8 @@
 export interface Product {
   id: string;
   name: string;
-  category: 'Full-Grain' | 'Top-Grain' | 'Split-Grain' | 'Genuine' | 'Bonded';
+  // Fix: Expanded the category union type to include product line categories used in the export portfolio
+  category: 'Full-Grain' | 'Top-Grain' | 'Split-Grain' | 'Genuine' | 'Bonded' | 'Leather & Canvas' | 'Fashion Bags' | 'Lifestyle Essentials';
   price: string;
   moq: string;
   imageUrl: string;

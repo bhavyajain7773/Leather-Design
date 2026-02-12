@@ -1,23 +1,45 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Stats from './components/Stats';
 import CatalogSection from './components/CatalogSection';
 import ProductCollection from './components/ProductCollection';
 import TeamSection from './components/TeamSection';
+import WorkShowcaseVideo from './components/WorkShowcaseVideo';
+import LocationSection from './components/LocationSection';
 import Footer from './components/Footer';
+import AboutPage from './components/AboutPage';
+import AIDesignStudio from './components/AIDesignStudio';
+import AboutSummary from './components/AboutSummary';
 
 const App: React.FC = () => {
+  const [view, setView] = useState<'home' | 'about'>('home');
+
+  // Ensure scroll to top on view change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [view]);
+
   return (
     <div className="min-h-screen flex flex-col selection:bg-neutral-200">
-      <Header />
+      <Header setView={setView} currentView={view} />
       <main className="flex-grow">
-        <Hero />
-        <Stats />
-        <CatalogSection />
-        <ProductCollection />
-        <TeamSection />
+        {view === 'home' ? (
+          <>
+            <Hero />
+            <Stats />
+            <AboutSummary onKnowMore={() => setView('about')} />
+            <CatalogSection />
+            <ProductCollection />
+            <AIDesignStudio />
+            <TeamSection />
+            <WorkShowcaseVideo />
+            <LocationSection />
+          </>
+        ) : (
+          <AboutPage />
+        )}
       </main>
       <Footer />
     </div>
