@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
     <section className="relative pt-28 pb-12 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
         <div className="inline-flex items-center space-x-2 px-3 py-1 bg-neutral-50 border border-neutral-100 rounded-full mb-6 animate-reveal" style={{ animationDelay: '0.1s' }}>
-          <span className="text-[9px] font-black uppercase tracking-widest-custom text-neutral-400">Exporting to UAE, USA, UK, Australia</span>
+          <span className="text-[9px] font-black uppercase tracking-widest-custom text-neutral-400">Exclusive Exporting to Germany</span>
         </div>
 
         <h1 className="text-5xl md:text-7xl font-black leading-[1.1] tracking-tight-custom text-center mb-8 animate-reveal" style={{ animationDelay: '0.2s' }}>
@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
         </h1>
         
         <p className="text-neutral-500 text-lg md:text-xl max-w-2xl text-center mb-10 font-medium leading-relaxed animate-reveal" style={{ animationDelay: '0.3s' }}>
-          SLB OVERSEAS bridges artisanal Jodhpur craft with everyday practicality, delivering premium lifestyle essentials to the global market.
+          SLB OVERSEAS bridges artisanal Jodhpur craft with everyday practicality, delivering premium lifestyle essentials exclusively to the German market.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 animate-reveal" style={{ animationDelay: '0.4s' }}>

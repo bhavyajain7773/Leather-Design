@@ -9,8 +9,8 @@ const AIDesignStudio: React.FC = () => {
   const [aiInsight, setAiInsight] = useState<string>('');
 
   const finishImages = {
-    Matte: 'https://images.unsplash.com/photo-1517423568366-8b83523034fd?auto=format&fit=crop&q=80&w=1200',
-    Glossy: 'https://images.unsplash.com/photo-1627384113743-6bd5a479fffd?auto=format&fit=crop&q=80&w=1200',
+    Matte: 'https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&q=80&w=1200',
+    Glossy: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&q=80&w=1200',
     Pebbled: 'https://images.unsplash.com/photo-1524289286702-f07229da36f5?auto=format&fit=crop&q=80&w=1200'
   };
 
@@ -20,11 +20,11 @@ const AIDesignStudio: React.FC = () => {
       const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
       const response = await ai.models.generateContent({
         model: 'gemini-3-flash-preview',
-        contents: `Characterize ${selectedPatina} leather for a luxury export client in 10-12 punchy words.`,
+        contents: `Characterize ${selectedPatina} leather bag finish for a luxury export client in Germany in 10-12 punchy words.`,
       });
       setAiInsight(response.text || '');
     } catch (err) {
-      setAiInsight('Refined texture, unmatched durability, and a signature luxury hand-feel.');
+      setAiInsight('Refined texture, unmatched durability, and a signature luxury hand-feel for every bag.');
     } finally {
       setLoading(false);
     }
@@ -39,7 +39,7 @@ const AIDesignStudio: React.FC = () => {
               Digital <br /><span className="text-neutral-700">Leathercraft.</span>
             </h2>
             <p className="text-neutral-500 text-lg mb-12 max-w-md font-medium leading-relaxed">
-              Simulate custom patinas and grain densities in real-time. Optimize your collection before production begins.
+              Simulate custom bag patinas and grain densities in real-time. Optimize your leather collection before production begins.
             </p>
             
             <div className="grid grid-cols-1 gap-3 mb-12">
@@ -51,7 +51,7 @@ const AIDesignStudio: React.FC = () => {
                     patina === p ? 'bg-white border-white text-black' : 'bg-white/5 border-white/10 text-white hover:bg-white/10'
                   }`}
                 >
-                  <span className="text-[11px] font-black uppercase tracking-widest-custom">{p} Finish</span>
+                  <span className="text-[11px] font-black uppercase tracking-widest-custom">{p} Finish Bag</span>
                   <div className={`w-1.5 h-1.5 rounded-full ${patina === p ? 'bg-black' : 'bg-white/20'}`} />
                 </button>
               ))}
@@ -65,7 +65,7 @@ const AIDesignStudio: React.FC = () => {
                 </div>
               ) : (
                 <p className="text-sm italic text-neutral-400 border-l border-white/20 pl-6 max-w-xs">
-                  {aiInsight || "Select a finish to analyze grain characteristics."}
+                  {aiInsight || "Select a finish to analyze bag grain characteristics."}
                 </p>
               )}
             </div>
@@ -76,7 +76,7 @@ const AIDesignStudio: React.FC = () => {
               <img 
                 key={patina}
                 src={finishImages[patina]} 
-                alt={`${patina} Leather Product Simulation`} 
+                alt={`${patina} Leather Bag Simulation`} 
                 className="w-full h-full object-cover transition-all duration-1000 animate-reveal"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60" />
@@ -86,7 +86,7 @@ const AIDesignStudio: React.FC = () => {
                     <div className="flex justify-between items-center">
                        <div>
                           <p className="text-[9px] font-black text-white/40 uppercase tracking-widest-custom mb-1">Rendering Engine</p>
-                          <p className="text-xs font-bold tracking-tight">Vanguard Portfolio — {patina}</p>
+                          <p className="text-xs font-bold tracking-tight">Luxury Bag Portfolio — {patina}</p>
                        </div>
                        <div className="text-[10px] font-black text-white/60">60 FPS</div>
                     </div>

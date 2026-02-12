@@ -1,6 +1,5 @@
 
 import React from 'react';
-// Fix: Added missing CheckCircle2 and PenTool icons to the imports from lucide-react
 import { ShieldCheck, Globe, Star, ArrowRight, Anchor, Target, Factory, Mail, Phone, MapPin, CheckCircle2, PenTool } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
@@ -20,15 +19,15 @@ const AboutPage: React.FC = () => {
         
         <div className="prose prose-xl max-w-none animate-reveal" style={{ animationDelay: '0.2s' }}>
           <p className="text-2xl md:text-3xl font-medium leading-tight text-neutral-800 mb-8">
-            Based in the heart of Jodhpur, India, SLB OVERSEAS is a dedicated manufacturer and exporter of premium Leather and Canvas artifacts. We believe a bag is never just a utility; it is a silent extension of your professional standards and personal journey.
+            Based in the heart of Jodhpur, India, SLB OVERSEAS is a dedicated manufacturer and exporter of premium Leather and Canvas artifacts, exclusively serving the German market.
           </p>
           <p className="text-lg text-neutral-500 leading-relaxed font-medium">
-            At SLB OVERSEAS, our mission is to redefine artisanal craftsmanship for the modern global landscape. We don't build items to be replaced. We build them to be remembered. Every hide selected, every seam stitched, and every foundation reinforced is done so with a single objective: to create a lifestyle essential that stands the test of time and travel.
+            At SLB OVERSEAS, our mission is to redefine artisanal craftsmanship for the modern German landscape. We don't build items to be replaced. We build them to be remembered. Every hide selected, every seam stitched, and every foundation reinforced is done so with a single objective: to create a lifestyle essential that stands the test of time and travel.
           </p>
         </div>
       </section>
 
-      {/* 02. The Heritage Story (1,000 Word Narrative) */}
+      {/* 02. The Heritage Story */}
       <section className="bg-neutral-50 py-32 mb-32">
         <div className="max-w-4xl mx-auto px-6">
           <div className="flex items-center gap-6 mb-16">
@@ -42,17 +41,17 @@ const AboutPage: React.FC = () => {
             </p>
 
             <p>
-              Our journey from a local atelier to a premier global exporter has been one of discipline. In an era where mass production has stripped objects of their soul, we chose a different path. We recognized that the international B2B buyer—whether in the glittering hubs of Dubai or the creative studios of London—isn't just looking for a product. They are looking for a partner. Someone who understands that a single skipped stitch can compromise a year's worth of brand reputation.
+              Our journey from a local atelier to a premier exporter has been one of discipline. In an era where mass production has stripped objects of their soul, we chose a different path. We recognized that the professional German B2B buyer isn't just looking for a product. They are looking for a partner. Someone who understands that a single skipped stitch can compromise a year's worth of brand reputation.
             </p>
 
             <blockquote className="border-l-4 border-black pl-8 my-16">
               <p className="text-3xl font-serif italic text-black leading-tight">
-                "Workmanship is our only true currency. We export the soul of Jodhpur, refined for the rigor of the global market."
+                "Workmanship is our only true currency. We export the soul of Jodhpur, refined for the rigor of the German market."
               </p>
             </blockquote>
 
             <p>
-              As we scaled, we brought Jodhpur's traditional artisanal soul into conversation with the demanding standards of modern manufacturing. We invested in our people—50+ artisans who are trained to meet the specific requirements of Western and Middle Eastern luxury sectors. We transformed our workspace into a hub of "Digital Leathercraft," where traditional methods are guided by rigorous technical specs. This combination is why our portfolio is now a mainstay for brands seeking reliable OEM and private-label solutions.
+              As we scaled, we brought Jodhpur's traditional artisanal soul into conversation with the demanding standards of modern manufacturing. We invested in our people—50+ artisans who are trained to meet the specific requirements of the European luxury sectors. We transformed our workspace into a hub of "Digital Leathercraft," where traditional methods are guided by rigorous technical specs.
             </p>
 
             <p>
@@ -77,7 +76,7 @@ const AboutPage: React.FC = () => {
             </div>
             <h3 className="text-xs font-black uppercase tracking-widest-custom mb-6">01. THE TOP</h3>
             <p className="text-neutral-500 text-sm leading-relaxed mb-6 font-medium">
-              The visible excellence. Our <strong>Top</strong> layer management begins with the selection of elite-grade, 100% genuine hides and premium 18oz cotton canvas. We prioritize full-grain surfaces that age beautifully, developing a unique character that synthetic alternatives can never mimic.
+              The visible excellence. Our <strong>Top</strong> layer management begins with the selection of elite-grade hides. We prioritize surfaces that develop a unique character that synthetic alternatives can never mimic.
             </p>
             <ul className="space-y-3">
               {['Full-Grain Selection', 'Hand-Picked Hides', 'Water-Resistant Finish'].map((item) => (
@@ -96,7 +95,7 @@ const AboutPage: React.FC = () => {
             </div>
             <h3 className="text-xs font-black uppercase tracking-widest-custom mb-6">02. THE MIDDLE</h3>
             <p className="text-neutral-500 text-sm leading-relaxed mb-6 font-medium">
-              The internal integrity. The <strong>Middle</strong> layer focuses on structural durability and organized utility. This is where our OEM and private-label expertise shines—creating custom internal compartments and reinforced structural linings that maintain the bag's silhouette.
+              The internal integrity. The <strong>Middle</strong> layer focuses on structural durability. This is where our OEM expertise shines—creating custom internal compartments for the German professional.
             </p>
             <ul className="space-y-3">
               {['Cotton Twill Lining', 'Organized Pockets', 'OEM Customization'].map((item) => (
@@ -115,7 +114,7 @@ const AboutPage: React.FC = () => {
             </div>
             <h3 className="text-xs font-black uppercase tracking-widest-custom mb-6">03. THE BOTTOM</h3>
             <p className="text-neutral-500 text-sm leading-relaxed mb-6 font-medium">
-              The lasting foundation. Our <strong>Bottom</strong> layer protocols ensure the bag can withstand the friction of reality. We use hardened foundation boards and premium metal hardware to protect the base, combined with ethical export-grade assembly standards.
+              The lasting foundation. Our <strong>Bottom</strong> layer protocols ensure the bag can withstand the friction of reality. We use hardened foundation boards and premium metal hardware.
             </p>
             <ul className="space-y-3">
               {['Reinforced Bases', 'Foundation Hardware', 'Export Compliance'].map((item) => (
@@ -135,10 +134,10 @@ const AboutPage: React.FC = () => {
           <Globe className="mx-auto mb-10 opacity-30 animate-spin-slow" size={48} />
           <h2 className="text-4xl md:text-6xl font-black tracking-tight-custom mb-10 leading-tight">
             Accessible Luxury.<br />
-            <span className="text-neutral-700">Global Standards.</span>
+            <span className="text-neutral-700">German Standards.</span>
           </h2>
           <p className="text-neutral-400 text-lg mb-16 leading-relaxed max-w-2xl mx-auto font-medium">
-            Our mission is to bring high-end craftsmanship to the UAE, USA, UK, and Australia. We operate with professional transparency: providing a 50% advance payment structure and maintaining strict quality control throughout the manufacturing cycle.
+            Our mission is to bring high-end craftsmanship exclusively to Germany. We operate with professional transparency: providing a 50% advance payment structure and maintaining strict quality control.
           </p>
 
           <a 
@@ -146,7 +145,7 @@ const AboutPage: React.FC = () => {
             target="_blank" 
             className="inline-flex items-center gap-4 px-12 py-6 bg-white text-black rounded-full text-xs font-black uppercase tracking-widest-custom hover:bg-neutral-200 transition-all group shadow-2xl shadow-white/5"
           >
-            <span>Global Standards & Compliance PDF</span>
+            <span>Compliance & Export PDF</span>
             <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
           </a>
         </div>

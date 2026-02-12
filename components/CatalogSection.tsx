@@ -16,7 +16,7 @@ const CatalogSection: React.FC = () => {
               Our Full <br /><span className="text-neutral-700 italic font-serif font-light">Collection.</span>
             </h2>
             <p className="text-neutral-500 text-lg mb-10 max-w-md font-medium leading-relaxed">
-              Explore our comprehensive export catalog featuring artisanal leather and canvas artifacts, detailed technical specifications, and volume-based pricing for international partners.
+              Explore our comprehensive export catalog featuring artisanal leather bags, detailed technical specifications, and volume-based pricing for German partners.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
@@ -51,8 +51,8 @@ const CatalogSection: React.FC = () => {
           <div className="relative group">
             <div className="aspect-[4/3] bg-neutral-900 rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl relative">
               <img 
-                src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&q=80&w=1200" 
-                alt="SLB Overseas Catalog Preview" 
+                src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&q=80&w=1200" 
+                alt="SLB Overseas Leather Catalog Preview" 
                 className="w-full h-full object-cover transition-all duration-1000"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60" />
@@ -66,7 +66,7 @@ const CatalogSection: React.FC = () => {
               <div className="absolute bottom-10 left-10 right-10">
                  <div className="p-6 glass rounded-[2rem] border border-white/20">
                     <p className="text-[9px] font-black text-white/40 uppercase tracking-widest-custom mb-1">Preview</p>
-                    <p className="text-sm font-bold tracking-tight">Lifestyle Essentials Pricing Guide</p>
+                    <p className="text-sm font-bold tracking-tight">Leather Bag Pricing Guide</p>
                  </div>
               </div>
             </div>

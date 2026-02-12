@@ -45,7 +45,7 @@ const LocationSection: React.FC = () => {
               </div>
               <h2 className="text-4xl md:text-5xl font-black tracking-tight-custom mb-2">
                 SLB OVERSEAS <br />
-                <span className="text-neutral-200 font-serif italic font-light">Export Solutions.</span>
+                <span className="text-neutral-200 font-serif italic font-light">German Export Specialist.</span>
               </h2>
             </div>
 
@@ -87,21 +87,12 @@ const LocationSection: React.FC = () => {
             </div>
 
             <div className="mt-10 pt-8 border-t border-neutral-200 flex items-center gap-4">
-              <div className="flex -space-x-2">
-                <div className="w-8 h-8 rounded-full border-2 border-white bg-neutral-100 overflow-hidden">
-                   <img src="https://flagcdn.com/w80/ae.png" alt="UAE" className="w-full h-full object-cover" />
-                </div>
-                <div className="w-8 h-8 rounded-full border-2 border-white bg-neutral-100 overflow-hidden">
-                   <img src="https://flagcdn.com/w80/us.png" alt="USA" className="w-full h-full object-cover" />
-                </div>
-                <div className="w-8 h-8 rounded-full border-2 border-white bg-neutral-100 overflow-hidden">
-                   <img src="https://flagcdn.com/w80/gb.png" alt="UK" className="w-full h-full object-cover" />
-                </div>
-                <div className="w-8 h-8 rounded-full border-2 border-white bg-neutral-100 overflow-hidden">
-                   <img src="https://flagcdn.com/w80/au.png" alt="Australia" className="w-full h-full object-cover" />
+              <div className="flex">
+                <div className="w-8 h-8 rounded-full border-2 border-white bg-neutral-100 overflow-hidden shadow-sm">
+                   <img src="https://flagcdn.com/w80/de.png" alt="Germany" className="w-full h-full object-cover" />
                 </div>
               </div>
-              <p className="text-[10px] font-black uppercase tracking-widest-custom text-neutral-400">Regular Port Shipments: UAE, USA, UK, AUS</p>
+              <p className="text-[10px] font-black uppercase tracking-widest-custom text-neutral-400">Exclusive Port Shipments: Germany (Hamburg, Bremerhaven)</p>
             </div>
           </div>
 

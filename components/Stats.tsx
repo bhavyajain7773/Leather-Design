@@ -3,7 +3,7 @@ import React from 'react';
 
 const Stats: React.FC = () => {
   const stats = [
-    { value: '50+', label: 'Countries', sub: 'UAE, USA, UK, Australia' },
+    { value: 'DE', label: 'Primary Market', sub: 'Germany Exclusive' },
     { value: '100%', label: 'Full Grain', sub: 'Genuine Hide Selection' },
     { value: '2018', label: 'Established', sub: 'Excellence in Jodhpur' },
     { value: '2k+', label: 'SKUs', sub: 'Customizable Designs' },

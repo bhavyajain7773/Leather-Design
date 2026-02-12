@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ArrowUpRight, Plus } from 'lucide-react';
 import { Product } from '../types';
@@ -7,58 +6,63 @@ const products: Product[] = [
   { 
     id: '1', 
     name: 'Vanguard Leather Messenger', 
+    // Fix: Updated category from 'Leather Bags' to 'Leather & Canvas' to match the Product type defined in types.ts
     category: 'Leather & Canvas', 
-    price: '$125.00', 
+    price: '€125.00', 
     moq: '25 units', 
     imageUrl: 'https://images.unsplash.com/photo-1524289286702-f07229da36f5?auto=format&fit=crop&q=80&w=800' 
   },
   { 
     id: '2', 
-    name: 'Metro Canvas Satchel', 
+    name: 'Metro Leather Satchel', 
+    // Fix: Updated category from 'Leather Bags' to 'Leather & Canvas' to match the Product type defined in types.ts
     category: 'Leather & Canvas', 
-    price: '$85.00', 
+    price: '€85.00', 
     moq: '50 units', 
-    imageUrl: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&q=80&w=800' 
+    imageUrl: 'https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&q=80&w=800' 
   },
   { 
     id: '3', 
-    name: 'Elite Fashion Tote', 
+    name: 'Elite Leather Tote', 
     category: 'Fashion Bags', 
-    price: '$110.00', 
+    price: '€110.00', 
     moq: '30 units', 
     imageUrl: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&q=80&w=800' 
   },
   { 
     id: '4', 
-    name: 'Essential Lifestyle Duffel', 
+    name: 'Essential Leather Duffel', 
     category: 'Lifestyle Essentials', 
-    price: '$145.00', 
+    price: '€145.00', 
     moq: '20 units', 
     imageUrl: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=800' 
   },
   { 
     id: '5', 
-    name: 'Sovereign Briefcase', 
+    name: 'Sovereign Leather Briefcase', 
     category: 'Lifestyle Essentials', 
-    price: '$165.00', 
+    price: '€165.00', 
     moq: '15 units', 
     imageUrl: 'https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&q=80&w=800' 
   },
   { 
     id: '6', 
-    name: 'Urban Canvas Backpack', 
+    name: 'Urban Leather Backpack', 
+    // Fix: Updated category from 'Leather Bags' to 'Leather & Canvas' to match the Product type defined in types.ts
     category: 'Leather & Canvas', 
-    price: '$75.00', 
+    price: '€75.00', 
     moq: '50 units', 
-    imageUrl: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&q=80&w=800' 
+    imageUrl: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&q=80&w=800' 
   },
 ];
 
 const ProductCollection: React.FC = () => {
   const [active, setActive] = useState('All');
 
+  // Fix: Updated filter category labels to match the available product categories
   const categories = ['All', 'Leather & Canvas', 'Fashion Bags', 'Lifestyle Essentials'];
 
+  // Fix: Simplified filter logic and removed invalid 'Leather Bags' string comparison which caused type overlap errors
   const filteredProducts = active === 'All' 
     ? products 
     : products.filter(product => product.category === active);
@@ -71,7 +75,7 @@ const ProductCollection: React.FC = () => {
           <h2 className="text-5xl md:text-7xl font-black text-center mb-8 tracking-tight-custom">Lifestyle Essentials.</h2>
           
           <p className="text-center text-neutral-400 max-w-lg mb-12 font-medium">
-            Our bags are positioned as must-have lifestyle essentials that bridge personal style with everyday practicality.
+            Our premium leather bags are positioned as must-have lifestyle essentials that bridge personal style with everyday practicality for the German market.
           </p>
           
           <div className="flex flex-wrap justify-center gap-2 md:gap-3">

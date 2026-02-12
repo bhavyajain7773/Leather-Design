@@ -11,16 +11,16 @@ const AnatomyOfCraft: React.FC = () => {
           <div className="max-w-2xl">
             <div className="inline-flex items-center space-x-3 px-4 py-2 bg-black text-white rounded-full mb-8">
                <Globe2 size={14} className="animate-spin-slow" />
-               <span className="text-[10px] font-black uppercase tracking-[0.3em]">Globally Trusted Manufacturer</span>
+               <span className="text-[10px] font-black uppercase tracking-[0.3em]">Exclusive German Leather Exporter</span>
             </div>
             <h2 className="text-7xl md:text-9xl font-black mb-0 leading-[0.85] tracking-tight-custom text-black">
               Built for<br />
-              <span className="text-neutral-200 font-serif italic font-light">the World.</span>
+              <span className="text-neutral-200 font-serif italic font-light">Excellence.</span>
             </h2>
           </div>
           <div className="lg:pb-4">
              <p className="text-neutral-400 text-lg font-medium leading-relaxed max-w-sm border-l-2 border-neutral-100 pl-8">
-               SLB OVERSEAS combines skilled craftsmanship with modern manufacturing to deliver international-quality products from India to the global market.
+               SLB OVERSEAS combines skilled craftsmanship with modern manufacturing to deliver international-quality leather bags exclusively to Germany.
              </p>
           </div>
         </div>
@@ -33,7 +33,7 @@ const AnatomyOfCraft: React.FC = () => {
                     <Target size={20} />
                   </div>
                   <h4 className="text-[11px] font-black uppercase tracking-widest-custom mb-4">Our Vision</h4>
-                  <p className="text-sm font-medium text-neutral-500 leading-relaxed">To become a globally trusted manufacturer and exporter of premium leather and canvas bags through quality, innovation, and ethical production.</p>
+                  <p className="text-sm font-medium text-neutral-500 leading-relaxed">To become Germany's most trusted manufacturer and exporter of premium leather bags through quality, innovation, and ethical production.</p>
                </div>
                
                <div className="group cursor-default">
@@ -41,14 +41,14 @@ const AnatomyOfCraft: React.FC = () => {
                     <Zap size={20} />
                   </div>
                   <h4 className="text-[11px] font-black uppercase tracking-widest-custom mb-4">Our Mission</h4>
-                  <p className="text-sm font-medium text-neutral-500 leading-relaxed">Delivering consistent craftsmanship, competitive pricing, and timely shipments while building long-term international relationships.</p>
+                  <p className="text-sm font-medium text-neutral-500 leading-relaxed">Delivering consistent leather bag craftsmanship and timely shipments while building long-term relationships with German brands.</p>
                </div>
             </div>
 
             <div className="p-8 bg-black text-white rounded-[3rem] relative overflow-hidden group">
                <div className="relative z-10">
                   <p className="text-[10px] font-black uppercase tracking-widest-custom mb-4 opacity-40">Export Standards</p>
-                  <p className="text-xl font-medium leading-tight mb-8">Strict quality control from raw material selection to final packaging.</p>
+                  <p className="text-xl font-medium leading-tight mb-8">Strict quality control from hide selection to final bag packaging.</p>
                   <button className="flex items-center space-x-2 text-[10px] font-black uppercase tracking-widest-custom hover:translate-x-2 transition-transform">
                     <span>Quality Protocol</span>
                     <MoveUpRight size={14} />
@@ -59,14 +59,14 @@ const AnatomyOfCraft: React.FC = () => {
           </div>
 
           <div className="lg:col-span-8 relative rounded-[4rem] overflow-hidden bg-neutral-50 border border-neutral-100 min-h-[500px]">
-             <img src="https://images.unsplash.com/photo-1517423568366-8b83523034fd?auto=format&fit=crop&q=80&w=1600" className="absolute inset-0 w-full h-full object-cover opacity-80" alt="Material focus" />
+             <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=1600" className="absolute inset-0 w-full h-full object-cover opacity-80" alt="Premium Leather Duffel Bag" />
              <div className="absolute inset-0 bg-gradient-to-br from-white via-transparent to-transparent" />
              
              <div className="absolute top-12 left-12 max-w-xs">
                 <span className="text-[9px] font-black uppercase tracking-[0.4em] text-black mb-4 block">Manufacturing Focus</span>
-                <h3 className="text-4xl font-black tracking-tight-custom mb-6">OEM & Private Label.</h3>
+                <h3 className="text-4xl font-black tracking-tight-custom mb-6">Leather OEM Specialist.</h3>
                 <p className="text-neutral-500 text-sm font-medium leading-relaxed">
-                  We specialize in tailoring our manufacturing force to meet specific brand requirements, ensuring every artifact matches your international portfolio standards.
+                  We specialize in tailoring our leathercrafting force to meet specific brand requirements, ensuring every bag matches your international portfolio standards.
                 </p>
              </div>
 

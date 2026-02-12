@@ -23,7 +23,7 @@ const AboutSummary: React.FC<AboutSummaryProps> = ({ onKnowMore }) => {
             </h2>
             
             <p className="text-xl text-neutral-800 font-medium leading-relaxed mb-8">
-              Born in the Blue City of Jodhpur, SLB OVERSEAS is more than a manufacturer—we are the stewards of a multi-generational craft.
+              Born in the Blue City of Jodhpur, SLB OVERSEAS is more than a manufacturer—we are the stewards of a multi-generational craft focused on the German market.
             </p>
             
             <div className="space-y-6 text-neutral-500 font-medium leading-relaxed mb-12 max-w-lg">
@@ -31,7 +31,7 @@ const AboutSummary: React.FC<AboutSummaryProps> = ({ onKnowMore }) => {
                 We believe a bag is a silent extension of your identity. It carries your history, your tools, and your ambitions. In our Jodhpur atelier, history isn't tucked away; it's alive in the hands of 50+ master artisans who treat every hide as a living canvas.
               </p>
               <p>
-                From the bustling local alleys to the luxury hubs of Dubai and London, we export the soul of Indian craftsmanship, refined for the rigor of the global market.
+                From the bustling local alleys to the luxury hubs of Berlin and Munich, we export the soul of Indian craftsmanship, refined for the rigor of the German landscape.
               </p>
             </div>
 

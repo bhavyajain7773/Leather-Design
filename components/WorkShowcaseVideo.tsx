@@ -31,7 +31,7 @@ const WorkShowcaseVideo: React.FC = () => {
             <span className="text-neutral-200 font-serif italic font-light">In Motion.</span>
           </h2>
           <p className="text-neutral-400 text-lg max-w-2xl font-medium leading-relaxed">
-            A cinematic glimpse into the precision and patience required to transform raw hide into global luxury.
+            A cinematic glimpse into the precision and patience required to transform raw hide into premium leather bags.
           </p>
         </div>
 
@@ -49,7 +49,7 @@ const WorkShowcaseVideo: React.FC = () => {
             muted
             playsInline
             className={`w-full h-full object-cover transition-transform duration-[3000ms] ${isPlaying ? 'scale-100' : 'scale-110'}`}
-            poster="https://images.unsplash.com/photo-1517423568366-8b83523034fd?auto=format&fit=crop&q=80&w=2400"
+            poster="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&q=80&w=2400"
           >
             {/* High-quality leathercraft showcase video */}
             <source 
