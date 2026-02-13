@@ -30,7 +30,7 @@ const AIDesignStudio: React.FC = () => {
   };
 
   return (
-    <section id="design-studio" className="py-32 bg-black text-white rounded-[32px] mx-4 my-8 overflow-hidden shadow-2xl">
+    <section id="design-studio" className="py-20 bg-black text-white rounded-[32px] mx-4 my-8 overflow-hidden shadow-2xl">
       <div className="max-w-7xl mx-auto px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <div>

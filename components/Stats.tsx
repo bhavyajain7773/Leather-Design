@@ -25,7 +25,7 @@ const Stats: React.FC = () => {
   ];
 
   return (
-    <section className="bg-white">
+    <section className="bg-white py-12">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-2 lg:grid-cols-4 border border-black/5 rounded-[32px] overflow-hidden divide-x divide-y md:divide-y-0 divide-black/5 bg-neutral-50">
           {stats.map((stat, idx) => (

@@ -62,11 +62,11 @@ const PortfolioPage: React.FC = () => {
     : portfolioProducts.filter(product => product.category === active);
 
   return (
-    <div className="bg-white text-black min-h-screen pt-48 pb-32">
+    <div className="bg-white text-black min-h-screen pt-32 pb-20">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Editorial Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-12 mb-24 animate-reveal">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-12 mb-16 animate-reveal">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-neutral-50 rounded-full border border-neutral-100 mb-8">
               <Archive size={12} className="text-black" />
@@ -152,7 +152,7 @@ const PortfolioPage: React.FC = () => {
         </div>
 
         {/* Catalog CTA */}
-        <div className="mt-32 p-16 md:p-24 bg-neutral-900 rounded-[60px] text-white overflow-hidden relative">
+        <div className="mt-20 p-16 md:p-24 bg-neutral-900 rounded-[60px] text-white overflow-hidden relative">
           <div className="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
              <Layers size={400} className="text-white -translate-y-20 translate-x-20 rotate-12" />
           </div>

@@ -3,11 +3,11 @@ import { Mail, Phone, MapPin, Send, Globe, MessageSquare } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
   return (
-    <div className="bg-white text-black min-h-screen pt-48 pb-32">
+    <div className="bg-white text-black min-h-screen pt-32 pb-20">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Header Section */}
-        <div className="mb-24 animate-reveal">
+        <div className="mb-16 animate-reveal">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-neutral-50 rounded-full border border-neutral-100 mb-8">
             <MessageSquare size={12} className="text-black" />
             <span className="text-[9px] font-black uppercase tracking-widest-custom text-neutral-500">Global Communication Desk</span>

@@ -6,7 +6,7 @@ const AboutPage: React.FC = () => {
     <div className="bg-white text-black transition-colors duration-500">
       
       {/* SECTION 1: IDENTITY */}
-      <section className="pt-48 pb-32 px-6 max-w-7xl mx-auto">
+      <section className="pt-32 pb-16 px-6 max-w-7xl mx-auto">
         <div className="inline-flex items-center gap-3 px-4 py-1.5 bg-neutral-100 border border-black/5 rounded-full mb-12 animate-reveal">
           <Star size={12} className="text-black" />
           <span className="text-[10px] font-black uppercase tracking-widest-custom text-black">Identity Statement</span>
@@ -45,7 +45,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* SECTION 2: THE NARRATIVE (DARK BENTO) */}
-      <section className="bg-black text-white py-32 px-6 rounded-[32px] mx-4 overflow-hidden">
+      <section className="bg-black text-white py-20 px-6 rounded-[32px] mx-4 overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-6 mb-20 opacity-30">
             <div className="h-px w-16 bg-white" />
@@ -70,7 +70,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* SECTION 4: GLOBAL DESK */}
-      <section className="bg-white text-black py-32 px-6">
+      <section className="bg-white text-black py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-[42px] md:text-[64px] font-black mb-12 tracking-tight-custom leading-[1.1]">Export Desk</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20 text-left">
