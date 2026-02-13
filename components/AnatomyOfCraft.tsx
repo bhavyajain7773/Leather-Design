@@ -1,84 +1,53 @@
-
 import React from 'react';
-import { Globe2, Target, MoveUpRight, ShieldCheck, Zap, Anchor } from 'lucide-react';
+import { Target, ShieldCheck, Zap } from 'lucide-react';
 
 const AnatomyOfCraft: React.FC = () => {
+  const tiers = [
+    {
+      id: '01',
+      title: 'Top: Elite Grain',
+      icon: <Target size={24} />,
+      desc: 'Selected from the highest tier of full-grain hides, ensuring natural durability and premium patina development.'
+    },
+    {
+      id: '02',
+      title: 'Middle: Structure',
+      icon: <Zap size={24} />,
+      desc: 'High-density interior fabric linings and structural padding that maintain form through rigorous global travel.'
+    },
+    {
+      id: '03',
+      title: 'Bottom: Foundation',
+      icon: <ShieldCheck size={24} />,
+      desc: 'Reinforced base construction with export-grade hardware, providing a lasting foundation for lifetime use.'
+    }
+  ];
+
   return (
-    <section id="heritage" className="py-32 bg-white overflow-hidden border-y border-neutral-100">
+    <section id="heritage-blueprint" className="section-padding bg-neutral-50">
       <div className="max-w-7xl mx-auto px-6">
-        
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-20 gap-8">
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center space-x-3 px-4 py-2 bg-black text-white rounded-full mb-8">
-               <Globe2 size={14} className="animate-spin-slow" />
-               <span className="text-[10px] font-black uppercase tracking-[0.3em]">Exclusive German Leather Exporter</span>
-            </div>
-            <h2 className="text-7xl md:text-9xl font-black mb-0 leading-[0.85] tracking-tight-custom text-black">
-              Built for<br />
-              <span className="text-neutral-200 font-serif italic font-light">Excellence.</span>
-            </h2>
-          </div>
-          <div className="lg:pb-4">
-             <p className="text-neutral-400 text-lg font-medium leading-relaxed max-w-sm border-l-2 border-neutral-100 pl-8">
-               SLB OVERSEAS combines skilled craftsmanship with modern manufacturing to deliver international-quality leather bags exclusively to Germany.
-             </p>
-          </div>
+        <div className="text-center mb-24 animate-reveal">
+          <h2 className="text-[42px] md:text-[64px] font-black tracking-tight-custom mb-6 text-black leading-[1.1]">Quality Architecture</h2>
+          <p className="text-[#666666] text-xl font-light max-w-2xl mx-auto">Three-tier structural excellence for the professional German market.</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
-          <div className="lg:col-span-4 flex flex-col justify-between space-y-12">
-            <div className="space-y-8">
-               <div className="group cursor-default">
-                  <div className="w-12 h-12 bg-neutral-50 rounded-2xl flex items-center justify-center mb-6 border border-neutral-100 group-hover:bg-black group-hover:text-white transition-all">
-                    <Target size={20} />
-                  </div>
-                  <h4 className="text-[11px] font-black uppercase tracking-widest-custom mb-4">Our Vision</h4>
-                  <p className="text-sm font-medium text-neutral-500 leading-relaxed">To become Germany's most trusted manufacturer and exporter of premium leather bags through quality, innovation, and ethical production.</p>
-               </div>
-               
-               <div className="group cursor-default">
-                  <div className="w-12 h-12 bg-neutral-50 rounded-2xl flex items-center justify-center mb-6 border border-neutral-100 group-hover:bg-black group-hover:text-white transition-all">
-                    <Zap size={20} />
-                  </div>
-                  <h4 className="text-[11px] font-black uppercase tracking-widest-custom mb-4">Our Mission</h4>
-                  <p className="text-sm font-medium text-neutral-500 leading-relaxed">Delivering consistent leather bag craftsmanship and timely shipments while building long-term relationships with German brands.</p>
-               </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {tiers.map((tier, idx) => (
+            <div 
+              key={idx} 
+              className="p-12 bg-white rounded-[32px] border border-black/5 hover:border-black/20 transition-all group animate-reveal"
+              style={{ animationDelay: `${idx * 0.1}s` }}
+            >
+              <div className="w-14 h-14 bg-black text-white rounded-2xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform">
+                {tier.icon}
+              </div>
+              <h4 className="text-[12px] font-semibold uppercase tracking-widest-custom text-[#666666] mb-4">Tier {tier.id}</h4>
+              <h3 className="text-2xl font-semibold mb-6 text-black font-inter">{tier.title}</h3>
+              <p className="text-lg font-light text-[#666666] leading-relaxed">
+                {tier.desc}
+              </p>
             </div>
-
-            <div className="p-8 bg-black text-white rounded-[3rem] relative overflow-hidden group">
-               <div className="relative z-10">
-                  <p className="text-[10px] font-black uppercase tracking-widest-custom mb-4 opacity-40">Export Standards</p>
-                  <p className="text-xl font-medium leading-tight mb-8">Strict quality control from hide selection to final bag packaging.</p>
-                  <button className="flex items-center space-x-2 text-[10px] font-black uppercase tracking-widest-custom hover:translate-x-2 transition-transform">
-                    <span>Quality Protocol</span>
-                    <MoveUpRight size={14} />
-                  </button>
-               </div>
-               <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-white/10 transition-all" />
-            </div>
-          </div>
-
-          <div className="lg:col-span-8 relative rounded-[4rem] overflow-hidden bg-neutral-50 border border-neutral-100 min-h-[500px]">
-             <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=1600" className="absolute inset-0 w-full h-full object-cover opacity-80" alt="Premium Leather Duffel Bag" />
-             <div className="absolute inset-0 bg-gradient-to-br from-white via-transparent to-transparent" />
-             
-             <div className="absolute top-12 left-12 max-w-xs">
-                <span className="text-[9px] font-black uppercase tracking-[0.4em] text-black mb-4 block">Manufacturing Focus</span>
-                <h3 className="text-4xl font-black tracking-tight-custom mb-6">Leather OEM Specialist.</h3>
-                <p className="text-neutral-500 text-sm font-medium leading-relaxed">
-                  We specialize in tailoring our leathercrafting force to meet specific brand requirements, ensuring every bag matches your international portfolio standards.
-                </p>
-             </div>
-
-             <div className="absolute bottom-12 right-12 flex gap-4">
-                <div className="w-16 h-16 bg-white rounded-full border border-neutral-100 flex items-center justify-center shadow-xl hover:scale-110 transition-transform cursor-pointer">
-                   <ShieldCheck size={24} />
-                </div>
-                <div className="w-16 h-16 bg-white rounded-full border border-neutral-100 flex items-center justify-center shadow-xl hover:scale-110 transition-transform cursor-pointer">
-                   <Anchor size={24} />
-                </div>
-             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

@@ -1,23 +1,38 @@
-
 import React from 'react';
 
 const Stats: React.FC = () => {
   const stats = [
-    { value: 'DE', label: 'Primary Market', sub: 'Germany Exclusive' },
-    { value: '100%', label: 'Full Grain', sub: 'Genuine Hide Selection' },
-    { value: '2018', label: 'Established', sub: 'Excellence in Jodhpur' },
-    { value: '2k+', label: 'SKUs', sub: 'Customizable Designs' },
+    { 
+      value: 'DE', 
+      label: 'Primary Market', 
+      sub: 'Germany Exclusive' 
+    },
+    { 
+      value: '100%', 
+      label: 'Full Grain', 
+      sub: 'Genuine Hide Selection' 
+    },
+    { 
+      value: '2018', 
+      label: 'Established', 
+      sub: 'Excellence in Jodhpur' 
+    },
+    { 
+      value: '2k+', 
+      label: 'SKUs', 
+      sub: 'Customizable Designs' 
+    },
   ];
 
   return (
-    <section className="py-8 bg-white">
+    <section className="bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 lg:grid-cols-4 border border-neutral-100 rounded-[2.5rem] overflow-hidden divide-x divide-y md:divide-y-0 divide-neutral-100">
+        <div className="grid grid-cols-2 lg:grid-cols-4 border border-black/5 rounded-[32px] overflow-hidden divide-x divide-y md:divide-y-0 divide-black/5 bg-neutral-50">
           {stats.map((stat, idx) => (
-            <div key={idx} className="p-10 flex flex-col items-start hover:bg-neutral-50">
-              <span className="text-5xl font-black tracking-tight-custom mb-4">{stat.value}</span>
-              <span className="text-[10px] font-black uppercase tracking-widest-custom text-black mb-1">{stat.label}</span>
-              <span className="text-[10px] uppercase tracking-widest-custom text-neutral-300">{stat.sub}</span>
+            <div key={idx} className="p-12 md:p-16 flex flex-col items-center text-center transition-colors">
+              <span className="text-5xl md:text-6xl font-black tracking-tight-custom mb-6 text-black">{stat.value}</span>
+              <span className="text-[11px] font-semibold uppercase tracking-widest-custom text-black mb-2">{stat.label}</span>
+              <span className="text-[10px] uppercase tracking-widest-custom text-[#666666] font-light">{stat.sub}</span>
             </div>
           ))}
         </div>

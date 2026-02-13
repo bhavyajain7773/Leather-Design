@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -10,11 +9,13 @@ import WorkShowcaseVideo from './components/WorkShowcaseVideo';
 import LocationSection from './components/LocationSection';
 import Footer from './components/Footer';
 import AboutPage from './components/AboutPage';
+import ContactPage from './components/ContactPage';
+import PortfolioPage from './components/PortfolioPage';
 import AIDesignStudio from './components/AIDesignStudio';
 import AboutSummary from './components/AboutSummary';
 
 const App: React.FC = () => {
-  const [view, setView] = useState<'home' | 'about'>('home');
+  const [view, setView] = useState<'home' | 'about' | 'contact' | 'portfolio'>('home');
 
   // Ensure scroll to top on view change
   useEffect(() => {
@@ -31,14 +32,18 @@ const App: React.FC = () => {
             <Stats />
             <AboutSummary onKnowMore={() => setView('about')} />
             <CatalogSection />
-            <ProductCollection />
+            <ProductCollection onViewAll={() => setView('portfolio')} />
             <AIDesignStudio />
             <TeamSection />
             <WorkShowcaseVideo />
             <LocationSection />
           </>
-        ) : (
+        ) : view === 'about' ? (
           <AboutPage />
+        ) : view === 'portfolio' ? (
+          <PortfolioPage />
+        ) : (
+          <ContactPage />
         )}
       </main>
       <Footer />

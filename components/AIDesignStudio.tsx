@@ -1,7 +1,6 @@
-
 import React, { useState } from 'react';
 import { GoogleGenAI } from '@google/genai';
-import { Sparkles, Loader2, Cpu } from 'lucide-react';
+import { Loader2, Sparkles } from 'lucide-react';
 
 const AIDesignStudio: React.FC = () => {
   const [patina, setPatina] = useState<'Matte' | 'Glossy' | 'Pebbled'>('Matte');
@@ -20,7 +19,7 @@ const AIDesignStudio: React.FC = () => {
       const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
       const response = await ai.models.generateContent({
         model: 'gemini-3-flash-preview',
-        contents: `Characterize ${selectedPatina} leather bag finish for a luxury export client in Germany in 10-12 punchy words.`,
+        contents: `Characterize ${selectedPatina} leather bag finish for a luxury global export client in Germany in 10-12 punchy words.`,
       });
       setAiInsight(response.text || '');
     } catch (err) {
@@ -31,65 +30,63 @@ const AIDesignStudio: React.FC = () => {
   };
 
   return (
-    <section id="design-studio" className="py-16 bg-black text-white rounded-[4rem] mx-6 my-4 overflow-hidden">
+    <section id="design-studio" className="py-32 bg-black text-white rounded-[32px] mx-4 my-8 overflow-hidden shadow-2xl">
       <div className="max-w-7xl mx-auto px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <div>
-            <h2 className="text-4xl md:text-6xl font-black mb-10 leading-[1.1] tracking-tight-custom italic">
-              Digital <br /><span className="text-neutral-700">Leathercraft.</span>
+            <div className="flex items-center gap-4 mb-10 opacity-40">
+               <Sparkles size={16} />
+               <span className="text-[10px] font-semibold uppercase tracking-widest-custom">Digital Atelier v.2.0</span>
+            </div>
+            <h2 className="text-[42px] md:text-[64px] font-black mb-12 leading-[1.1] tracking-tight-custom">
+              The <span className="opacity-30 font-serif italic font-light">Digital</span> <br />Customization.
             </h2>
-            <p className="text-neutral-500 text-lg mb-12 max-w-md font-medium leading-relaxed">
-              Simulate custom bag patinas and grain densities in real-time. Optimize your leather collection before production begins.
+            <p className="text-neutral-400 text-lg md:text-xl mb-16 max-w-md font-light leading-relaxed">
+              Simulate high-density bag patinas for the professional German market. Refine your collection with AI-driven grain analysis.
             </p>
             
-            <div className="grid grid-cols-1 gap-3 mb-12">
+            <div className="grid grid-cols-1 gap-4 mb-16">
               {(['Matte', 'Glossy', 'Pebbled'] as const).map((p) => (
                 <button
                   key={p}
                   onClick={() => { setPatina(p); generateInsight(p); }}
-                  className={`flex items-center justify-between p-5 rounded-2xl border transition-all ${
+                  className={`flex items-center justify-between px-6 py-4 rounded-full border transition-all group ${
                     patina === p ? 'bg-white border-white text-black' : 'bg-white/5 border-white/10 text-white hover:bg-white/10'
                   }`}
                 >
-                  <span className="text-[11px] font-black uppercase tracking-widest-custom">{p} Finish Bag</span>
-                  <div className={`w-1.5 h-1.5 rounded-full ${patina === p ? 'bg-black' : 'bg-white/20'}`} />
+                  <span className="text-[11px] font-semibold uppercase tracking-widest-custom">{p} Finish Profile</span>
+                  <div className={`w-2 h-2 rounded-full transition-transform group-hover:scale-150 ${patina === p ? 'bg-black' : 'bg-white/40'}`} />
                 </button>
               ))}
             </div>
 
-            <div className="min-h-[60px] flex items-center">
+            <div className="min-h-[100px] flex items-center bg-white/5 p-8 rounded-[32px] border border-white/5">
               {loading ? (
-                <div className="flex items-center space-x-3 text-neutral-600">
-                  <Loader2 className="animate-spin" size={16} />
-                  <span className="text-[10px] font-black uppercase tracking-widest-custom">Computing Spec...</span>
+                <div className="flex items-center space-x-4 text-white/40">
+                  <Loader2 className="animate-spin" size={20} />
+                  <span className="text-[10px] font-semibold uppercase tracking-widest-custom">Analyzing Spec...</span>
                 </div>
               ) : (
-                <p className="text-sm italic text-neutral-400 border-l border-white/20 pl-6 max-w-xs">
-                  {aiInsight || "Select a finish to analyze bag grain characteristics."}
+                <p className="text-lg italic font-light text-neutral-300 leading-relaxed">
+                  {aiInsight || "Select a leather finish to begin the technical characterization analysis."}
                 </p>
               )}
             </div>
           </div>
 
-          <div className="relative">
-            <div className="aspect-[4/5] md:aspect-square bg-neutral-900 rounded-[3rem] overflow-hidden border border-white/10 group shadow-2xl">
+          <div className="relative group">
+            <div className="aspect-square bg-neutral-900 rounded-[32px] overflow-hidden border border-white/10 shadow-2xl relative">
               <img 
                 key={patina}
                 src={finishImages[patina]} 
-                alt={`${patina} Leather Bag Simulation`} 
-                className="w-full h-full object-cover transition-all duration-1000 animate-reveal"
+                alt={`${patina} Leather Bag Profile`} 
+                className="w-full h-full object-cover transition-all duration-1000 animate-reveal grayscale group-hover:grayscale-0"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60" />
-              
-              <div className="absolute bottom-10 left-10 right-10">
-                 <div className="p-6 glass rounded-[2rem] border border-white/20">
-                    <div className="flex justify-between items-center">
-                       <div>
-                          <p className="text-[9px] font-black text-white/40 uppercase tracking-widest-custom mb-1">Rendering Engine</p>
-                          <p className="text-xs font-bold tracking-tight">Luxury Bag Portfolio — {patina}</p>
-                       </div>
-                       <div className="text-[10px] font-black text-white/60">60 FPS</div>
-                    </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+              <div className="absolute bottom-12 left-12 right-12">
+                 <div className="bg-white/10 backdrop-blur-md p-8 rounded-[32px] border border-white/10">
+                    <p className="text-[10px] font-semibold uppercase tracking-widest-custom text-white/40 mb-2">Atelier View</p>
+                    <p className="text-sm font-semibold tracking-tight text-white">Technical Simulation: {patina} Grain Density Active</p>
                  </div>
               </div>
             </div>

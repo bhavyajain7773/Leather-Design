@@ -1,180 +1,100 @@
-
 import React from 'react';
-import { ShieldCheck, Globe, Star, ArrowRight, Anchor, Target, Factory, Mail, Phone, MapPin, CheckCircle2, PenTool } from 'lucide-react';
+import { Mail, Phone, MapPin, CheckCircle2, Star, ArrowRight } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   return (
-    <div className="bg-white text-black pt-32 pb-24">
-      {/* 01. The Identity Statement */}
-      <section className="max-w-4xl mx-auto px-6 mb-32">
-        <div className="inline-flex items-center gap-3 px-3 py-1 bg-neutral-50 border border-neutral-100 rounded-full mb-8 animate-reveal">
-          <div className="w-1.5 h-1.5 rounded-full bg-black animate-pulse" />
-          <span className="text-[9px] font-black uppercase tracking-widest-custom text-neutral-400">Identity Statement</span>
+    <div className="bg-white text-black transition-colors duration-500">
+      
+      {/* SECTION 1: IDENTITY */}
+      <section className="pt-48 pb-32 px-6 max-w-7xl mx-auto">
+        <div className="inline-flex items-center gap-3 px-4 py-1.5 bg-neutral-100 border border-black/5 rounded-full mb-12 animate-reveal">
+          <Star size={12} className="text-black" />
+          <span className="text-[10px] font-black uppercase tracking-widest-custom text-black">Identity Statement</span>
         </div>
         
-        <h1 className="text-6xl md:text-8xl font-black tracking-tight-custom leading-[0.9] mb-12 animate-reveal" style={{ animationDelay: '0.1s' }}>
-          More Than a Bag.<br />
-          <span className="font-serif italic font-light text-neutral-300">An Identity.</span>
+        <h1 className="text-[42px] md:text-[64px] font-black leading-[1.1] tracking-tight-custom mb-16 animate-reveal text-black">
+          The Soul <br />
+          <span className="opacity-30 font-serif italic font-light">of Jodhpur.</span>
         </h1>
         
-        <div className="prose prose-xl max-w-none animate-reveal" style={{ animationDelay: '0.2s' }}>
-          <p className="text-2xl md:text-3xl font-medium leading-tight text-neutral-800 mb-8">
-            Based in the heart of Jodhpur, India, SLB OVERSEAS is a dedicated manufacturer and exporter of premium Leather and Canvas artifacts, exclusively serving the German market.
-          </p>
-          <p className="text-lg text-neutral-500 leading-relaxed font-medium">
-            At SLB OVERSEAS, our mission is to redefine artisanal craftsmanship for the modern German landscape. We don't build items to be replaced. We build them to be remembered. Every hide selected, every seam stitched, and every foundation reinforced is done so with a single objective: to create a lifestyle essential that stands the test of time and travel.
-          </p>
-        </div>
-      </section>
-
-      {/* 02. The Heritage Story */}
-      <section className="bg-neutral-50 py-32 mb-32">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="flex items-center gap-6 mb-16">
-            <div className="h-px w-12 bg-black" />
-            <h2 className="text-sm font-black uppercase tracking-widest-custom">The Heritage Narrative</h2>
-          </div>
-
-          <div className="space-y-12 text-lg leading-relaxed text-neutral-700 font-medium">
-            <p>
-              The sun rising over the sandstone silhouettes of Jodhpur brings more than just heat; it brings a rhythmic certainty. This is the "Blue City," a place where history isn't tucked away in museums, but alive in the calloused hands of its people. SLB OVERSEAS—formerly recognized as Royal Leather Exports—was born in these very alleys. We are the inheritors of a lineage that treats leather not as a material, but as a living canvas.
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start animate-reveal" style={{ animationDelay: '0.2s' }}>
+          <div className="md:col-span-8">
+            <p className="text-2xl md:text-3xl font-semibold leading-tight mb-12 text-black">
+              SLB OVERSEAS is a premium manufacturer and exporter of leather artifacts, bridging the gap between ancient Rajasthani soul and global utility.
             </p>
-
-            <p>
-              Our journey from a local atelier to a premier exporter has been one of discipline. In an era where mass production has stripped objects of their soul, we chose a different path. We recognized that the professional German B2B buyer isn't just looking for a product. They are looking for a partner. Someone who understands that a single skipped stitch can compromise a year's worth of brand reputation.
-            </p>
-
-            <blockquote className="border-l-4 border-black pl-8 my-16">
-              <p className="text-3xl font-serif italic text-black leading-tight">
-                "Workmanship is our only true currency. We export the soul of Jodhpur, refined for the rigor of the German market."
+            <div className="space-y-8 text-lg font-light text-[#666666] leading-relaxed max-w-2xl">
+              <p>
+                A bag is never just an accessory; it is a declaration of standards. In the "Blue City" of Jodhpur, we carry forward a multi-generational lineage of leathercraft. Our mission is to create lifestyle essentials that don't just age—they evolve.
               </p>
-            </blockquote>
-
-            <p>
-              As we scaled, we brought Jodhpur's traditional artisanal soul into conversation with the demanding standards of modern manufacturing. We invested in our people—50+ artisans who are trained to meet the specific requirements of the European luxury sectors. We transformed our workspace into a hub of "Digital Leathercraft," where traditional methods are guided by rigorous technical specs.
-            </p>
-
-            <p>
-              We don't believe in the ephemeral. A bag from SLB OVERSEAS is a commitment. It is designed to be an "identity statement" for the person who carries it. It carries their ambitions, their tools, and their history. This philosophy is embedded in every layer of our creation, from the selection of the hide to the final bolt on the base.
-            </p>
+              <p>
+                Serving the German market with precision and reliability, we ensure that every hide selected and every seam stitched meets the rigorous demands of international trade.
+              </p>
+            </div>
+          </div>
+          <div className="md:col-span-4 flex flex-col gap-6">
+            <div className="p-10 bg-neutral-50 rounded-[32px] border border-black/5">
+              <h4 className="text-[10px] font-black uppercase tracking-widest mb-6 opacity-40">Export Standards</h4>
+              <ul className="space-y-4 text-[11px] font-semibold uppercase tracking-widest-custom">
+                <li className="flex items-center justify-between"><span>Elite Grain</span> <CheckCircle2 size={12}/></li>
+                <li className="flex items-center justify-between"><span>Structure</span> <CheckCircle2 size={12}/></li>
+                <li className="flex items-center justify-between"><span>Foundation</span> <CheckCircle2 size={12}/></li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 03. The Three-Tier Quality Philosophy */}
-      <section className="max-w-6xl mx-auto px-6 mb-32">
-        <div className="text-center mb-24">
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight-custom mb-4">The Architecture of Quality</h2>
-          <p className="text-neutral-400 font-medium uppercase tracking-widest-custom text-[10px]">Managing the Three Critical Layers</p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {/* TOP */}
-          <div className="p-10 border border-neutral-100 rounded-[3rem] hover:bg-neutral-50 transition-all group">
-            <div className="w-12 h-12 rounded-2xl bg-black text-white flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-              <Star size={20} />
-            </div>
-            <h3 className="text-xs font-black uppercase tracking-widest-custom mb-6">01. THE TOP</h3>
-            <p className="text-neutral-500 text-sm leading-relaxed mb-6 font-medium">
-              The visible excellence. Our <strong>Top</strong> layer management begins with the selection of elite-grade hides. We prioritize surfaces that develop a unique character that synthetic alternatives can never mimic.
-            </p>
-            <ul className="space-y-3">
-              {['Full-Grain Selection', 'Hand-Picked Hides', 'Water-Resistant Finish'].map((item) => (
-                <li key={item} className="flex items-center gap-2 text-[10px] font-black text-black">
-                  <CheckCircle2 size={12} className="text-neutral-300" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+      {/* SECTION 2: THE NARRATIVE (DARK BENTO) */}
+      <section className="bg-black text-white py-32 px-6 rounded-[32px] mx-4 overflow-hidden">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex items-center gap-6 mb-20 opacity-30">
+            <div className="h-px w-16 bg-white" />
+            <span className="text-[11px] font-semibold uppercase tracking-widest-custom">The Heritage Narrative</span>
           </div>
 
-          {/* MIDDLE */}
-          <div className="p-10 border border-neutral-100 rounded-[3rem] hover:bg-neutral-50 transition-all group">
-            <div className="w-12 h-12 rounded-2xl bg-black text-white flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-              <PenTool size={20} />
+          <div className="space-y-16">
+            <h2 className="font-serif italic text-[32px] md:text-[52px] leading-tight text-white/90">
+              "Workmanship is our only true currency. We export the soul of Jodhpur, refined for the rigor of the global market."
+            </h2>
+            
+            <div className="space-y-12 text-lg font-light text-neutral-400 max-w-3xl leading-relaxed">
+              <p>
+                Jodhpur has always been a place where history isn't tucked away; it's alive in the calloused hands of its people. SLB OVERSEAS was born in these very sandstone alleys. We treat leather not as a commodity, but as a living canvas that records the history of its owner.
+              </p>
+              <p>
+                Our journey from a local atelier to a premier global exporter has been one of discipline. We recognized early that the professional international buyer isn't looking for a product—they are looking for a partner.
+              </p>
             </div>
-            <h3 className="text-xs font-black uppercase tracking-widest-custom mb-6">02. THE MIDDLE</h3>
-            <p className="text-neutral-500 text-sm leading-relaxed mb-6 font-medium">
-              The internal integrity. The <strong>Middle</strong> layer focuses on structural durability. This is where our OEM expertise shines—creating custom internal compartments for the German professional.
-            </p>
-            <ul className="space-y-3">
-              {['Cotton Twill Lining', 'Organized Pockets', 'OEM Customization'].map((item) => (
-                <li key={item} className="flex items-center gap-2 text-[10px] font-black text-black">
-                  <CheckCircle2 size={12} className="text-neutral-300" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* BOTTOM */}
-          <div className="p-10 border border-neutral-100 rounded-[3rem] hover:bg-neutral-50 transition-all group">
-            <div className="w-12 h-12 rounded-2xl bg-black text-white flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-              <Anchor size={20} />
-            </div>
-            <h3 className="text-xs font-black uppercase tracking-widest-custom mb-6">03. THE BOTTOM</h3>
-            <p className="text-neutral-500 text-sm leading-relaxed mb-6 font-medium">
-              The lasting foundation. Our <strong>Bottom</strong> layer protocols ensure the bag can withstand the friction of reality. We use hardened foundation boards and premium metal hardware.
-            </p>
-            <ul className="space-y-3">
-              {['Reinforced Bases', 'Foundation Hardware', 'Export Compliance'].map((item) => (
-                <li key={item} className="flex items-center gap-2 text-[10px] font-black text-black">
-                  <CheckCircle2 size={12} className="text-neutral-300" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </section>
 
-      {/* 04. Global Mission & Technical Standards */}
-      <section className="bg-black text-white py-32 rounded-[5rem] mx-6">
-        <div className="max-w-4xl mx-auto px-10 text-center">
-          <Globe className="mx-auto mb-10 opacity-30 animate-spin-slow" size={48} />
-          <h2 className="text-4xl md:text-6xl font-black tracking-tight-custom mb-10 leading-tight">
-            Accessible Luxury.<br />
-            <span className="text-neutral-700">German Standards.</span>
-          </h2>
-          <p className="text-neutral-400 text-lg mb-16 leading-relaxed max-w-2xl mx-auto font-medium">
-            Our mission is to bring high-end craftsmanship exclusively to Germany. We operate with professional transparency: providing a 50% advance payment structure and maintaining strict quality control.
-          </p>
-
-          <a 
-            href="https://slboverseas.com/compliance" 
-            target="_blank" 
-            className="inline-flex items-center gap-4 px-12 py-6 bg-white text-black rounded-full text-xs font-black uppercase tracking-widest-custom hover:bg-neutral-200 transition-all group shadow-2xl shadow-white/5"
-          >
-            <span>Compliance & Export PDF</span>
-            <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
+      {/* SECTION 4: GLOBAL DESK */}
+      <section className="bg-white text-black py-32 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-[42px] md:text-[64px] font-black mb-12 tracking-tight-custom leading-[1.1]">Export Desk</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20 text-left">
+            <div className="flex flex-col gap-2">
+              <Mail className="opacity-20 mb-2" size={24}/>
+              <span className="text-[10px] font-black uppercase tracking-widest opacity-40">Email</span>
+              <p className="text-lg font-semibold">slboverseas2025@gmail.com</p>
+            </div>
+            <div className="flex flex-col gap-2">
+              <Phone className="opacity-20 mb-2" size={24}/>
+              <span className="text-[10px] font-black uppercase tracking-widest opacity-40">Direct Line</span>
+              <p className="text-lg font-semibold">+91 7793003465</p>
+            </div>
+            <div className="flex flex-col gap-2">
+              <MapPin className="opacity-20 mb-2" size={24}/>
+              <span className="text-[10px] font-black uppercase tracking-widest opacity-40">Factory Address</span>
+              <p className="text-lg font-semibold">J-231 Pratap Nagar, Jodhpur, India.</p>
+            </div>
+          </div>
+          
+          <a href="https://slboverseas.com" className="inline-flex items-center gap-6 px-8 py-3 bg-black text-white rounded-full text-[12px] font-semibold uppercase tracking-widest-custom hover:bg-neutral-800 transition-all shadow-xl">
+            <span>Download Compliance Report</span>
+            <ArrowRight size={16}/>
           </a>
-        </div>
-      </section>
-
-      {/* Footer Info */}
-      <section className="max-w-4xl mx-auto px-6 mt-32 border-t border-neutral-100 pt-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-           <div className="flex items-start gap-4">
-              <Mail className="text-neutral-300" size={20} />
-              <div>
-                 <p className="text-[10px] font-black uppercase tracking-widest-custom text-neutral-400 mb-1">Electronic Mail</p>
-                 <p className="text-sm font-bold">slboverseas2025@gmail.com</p>
-              </div>
-           </div>
-           <div className="flex items-start gap-4">
-              <Phone className="text-neutral-300" size={20} />
-              <div>
-                 <p className="text-[10px] font-black uppercase tracking-widest-custom text-neutral-400 mb-1">Direct Line</p>
-                 <p className="text-sm font-bold">+91 7793003465</p>
-              </div>
-           </div>
-           <div className="flex items-start gap-4">
-              <MapPin className="text-neutral-300" size={20} />
-              <div>
-                 <p className="text-[10px] font-black uppercase tracking-widest-custom text-neutral-400 mb-1">Athelier Location</p>
-                 <p className="text-sm font-bold">J-231 Pratap Nagar, Jodhpur, Rajasthan.</p>
-              </div>
-           </div>
         </div>
       </section>
     </div>

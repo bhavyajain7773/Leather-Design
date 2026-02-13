@@ -1,75 +1,50 @@
-
 import React from 'react';
 import { Download, FileText, ArrowRight } from 'lucide-react';
 
 const CatalogSection: React.FC = () => {
   return (
-    <section id="catalog-download" className="py-16 bg-black text-white rounded-[4rem] mx-6 my-4 overflow-hidden">
+    <section id="catalog-download" className="py-32 bg-black text-white rounded-[32px] mx-4 my-8 overflow-hidden shadow-2xl">
       <div className="max-w-7xl mx-auto px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <div className="animate-reveal">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 border border-white/10 rounded-full mb-6">
-              <FileText size={12} className="text-neutral-500" />
-              <span className="text-[9px] font-black uppercase tracking-widest-custom text-neutral-400">Export Portfolio 2025</span>
+            <div className="inline-flex items-center space-x-3 px-5 py-2 bg-white/10 border border-white/10 rounded-full mb-10">
+              <FileText size={14} className="text-white" />
+              <span className="text-[10px] font-semibold uppercase tracking-widest-custom">Export Portfolio 2025 v.4</span>
             </div>
-            <h2 className="text-4xl md:text-6xl font-black mb-8 leading-[1.1] tracking-tight-custom">
-              Our Full <br /><span className="text-neutral-700 italic font-serif font-light">Collection.</span>
+            <h2 className="text-[42px] md:text-[64px] font-black mb-12 leading-[1.1] tracking-tight-custom">
+              Download <br /><span className="opacity-30 font-serif italic font-light">The Catalog.</span>
             </h2>
-            <p className="text-neutral-500 text-lg mb-10 max-w-md font-medium leading-relaxed">
-              Explore our comprehensive export catalog featuring artisanal leather bags, detailed technical specifications, and volume-based pricing for German partners.
+            <p className="text-neutral-400 text-xl mb-16 max-w-md font-light leading-relaxed">
+              Explore our comprehensive collection of artisanal carry, including technical specs for the German professional sector.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+            <div className="flex flex-col sm:flex-row gap-6">
               <a 
-                href="https://slboverseas.com/catalog" 
+                href="https://slboverseas.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="group flex items-center justify-center space-x-3 px-10 py-5 bg-white text-black rounded-full hover:bg-neutral-200 transition-all shadow-xl shadow-white/5"
+                className="group flex items-center justify-center space-x-4 px-8 py-3 bg-white text-black rounded-full hover:bg-neutral-200 transition-all shadow-2xl"
               >
-                <Download size={18} />
-                <span className="text-xs font-black uppercase tracking-widest-custom">Download Catalog</span>
+                <Download size={20} />
+                <span className="text-[12px] font-semibold uppercase tracking-widest-custom">Get PDF Collection</span>
               </a>
-              <button className="group flex items-center justify-center space-x-3 px-10 py-5 bg-transparent border border-white/10 text-white rounded-full hover:bg-white/5 transition-all">
-                <span className="text-xs font-black uppercase tracking-widest-custom">Request Samples</span>
-                <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-              </button>
-            </div>
-
-            <div className="flex items-center space-x-8 text-neutral-600">
-               <div>
-                 <p className="text-[10px] font-black uppercase tracking-widest-custom text-white/40 mb-1">Format</p>
-                 <p className="text-xs font-bold">PDF (15.8 MB)</p>
-               </div>
-               <div className="w-px h-8 bg-white/10" />
-               <div>
-                 <p className="text-[10px] font-black uppercase tracking-widest-custom text-white/40 mb-1">Last Updated</p>
-                 <p className="text-xs font-bold">January 2025</p>
-               </div>
+              <a 
+                href="https://slboverseas.com"
+                className="group flex items-center justify-center space-x-4 px-8 py-3 bg-transparent border border-white/20 text-white rounded-full hover:bg-white/10 transition-all"
+              >
+                <span className="text-[12px] font-semibold uppercase tracking-widest-custom">Sample Request</span>
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </a>
             </div>
           </div>
 
-          <div className="relative group">
-            <div className="aspect-[4/3] bg-neutral-900 rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl relative">
-              <img 
-                src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&q=80&w=1200" 
-                alt="SLB Overseas Leather Catalog Preview" 
-                className="w-full h-full object-cover transition-all duration-1000"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60" />
-              
-              <div className="absolute inset-0 flex items-center justify-center">
-                 <div className="w-24 h-24 rounded-full bg-white/10 backdrop-blur-3xl border border-white/20 flex items-center justify-center animate-pulse">
-                    <FileText size={32} className="text-white" />
-                 </div>
-              </div>
-
-              <div className="absolute bottom-10 left-10 right-10">
-                 <div className="p-6 glass rounded-[2rem] border border-white/20">
-                    <p className="text-[9px] font-black text-white/40 uppercase tracking-widest-custom mb-1">Preview</p>
-                    <p className="text-sm font-bold tracking-tight">Leather Bag Pricing Guide</p>
-                 </div>
-              </div>
-            </div>
+          <div className="relative group rounded-[32px] overflow-hidden border border-white/10 shadow-2xl">
+            <img 
+              src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&q=80&w=1200" 
+              alt="SLB Overseas Portfolio Preview" 
+              className="w-full aspect-[4/3] object-cover transition-all duration-1000 group-hover:scale-105 grayscale"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           </div>
         </div>
       </div>

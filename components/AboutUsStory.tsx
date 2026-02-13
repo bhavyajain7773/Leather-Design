@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowDown, CheckCircle2, Globe, Shield, PenTool, ExternalLink } from 'lucide-react';
 
@@ -13,7 +12,7 @@ const AboutUsStory: React.FC = () => {
             <span className="w-1.5 h-1.5 rounded-full bg-black animate-pulse" />
             <span className="text-[9px] font-black uppercase tracking-widest-custom text-neutral-400">The Identity Statement</span>
           </div>
-          <h2 className="text-6xl md:text-8xl font-black tracking-tight-custom mb-10 leading-[0.9]">
+          <h2 className="text-[42px] md:text-[64px] font-black tracking-tight-custom mb-10 leading-[1.1]">
             Heritage in <br />
             <span className="font-serif italic font-light text-neutral-300">Every Stitch.</span>
           </h2>
@@ -38,4 +37,12 @@ const AboutUsStory: React.FC = () => {
               <p className="text-neutral-600 leading-relaxed mb-6">
                 Our story is inseparable from the landscape of Rajasthan. Jodhpur has always been a place where the sun is unforgiving and the craft is uncompromising. In our atelier, we employ over 50 skilled artisans whose hands possess the muscle memory of generations. They don't just see a piece of hide; they see the potential for a legacy. 
               </p>
-              <p className="text-neutral-6
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  );
+};
+
+export default AboutUsStory;

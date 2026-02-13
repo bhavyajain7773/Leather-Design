@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SLB OVERSEAS | Premium Leather & Canvas Craft</title>
+    <title>SLB OVERSEAS | Elite Leather Manufacturing</title>
     <script type="importmap">
     {
       "imports": {
@@ -24,16 +23,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <style>
       :root {
-        --bg: #ffffff;
-        --fg: #000000;
-        --border: #f0f0f0;
+        --bg-primary: #FFFFFF;
+        --bg-secondary: #000000;
+        --bg-muted: #F9F9F9;
+        --text-primary: #000000;
+        --text-muted: #666666;
+        --radius-bento: 32px;
       }
       body {
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        background-color: var(--bg);
-        color: var(--fg);
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
         -webkit-font-smoothing: antialiased;
         scroll-behavior: smooth;
+        line-height: 1.6;
       }
       .font-serif {
         font-family: 'Playfair Display', serif;
@@ -42,30 +45,37 @@
         letter-spacing: -0.04em;
       }
       .tracking-widest-custom {
-        letter-spacing: 0.15em;
+        letter-spacing: 0.2em;
       }
-      * {
-        transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
-      }
-      .glass {
-        background: rgba(255, 255, 255, 0.7);
+      .glass-light {
+        background: rgba(255, 255, 255, 0.9);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         border: 1px solid rgba(0, 0, 0, 0.05);
       }
+      .bento-card {
+        background: var(--bg-muted);
+        border-radius: var(--radius-bento);
+        border: 1px solid rgba(0, 0, 0, 0.03);
+        overflow: hidden;
+      }
+      .section-padding {
+        padding-top: 120px;
+        padding-bottom: 120px;
+      }
       @keyframes reveal {
-        from { opacity: 0; transform: translateY(20px); }
+        from { opacity: 0; transform: translateY(15px); }
         to { opacity: 1; transform: translateY(0); }
       }
       .animate-reveal {
-        animation: reveal 0.8s cubic-bezier(0.2, 0, 0, 1) forwards;
+        animation: reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
       }
-      .animate-spin-slow {
-        animation: spin 8s linear infinite;
+      .grayscale-img {
+        filter: grayscale(100%);
+        transition: filter 0.6s ease;
       }
-      @keyframes spin {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
+      .grayscale-img:hover {
+        filter: grayscale(0%);
       }
     </style>
   </head>
