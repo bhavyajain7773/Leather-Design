@@ -3,22 +3,22 @@ import { Download, FileText, ArrowRight } from 'lucide-react';
 
 const CatalogSection: React.FC = () => {
   return (
-    <section id="catalog-download" className="py-20 bg-black text-white rounded-[32px] mx-4 my-8 overflow-hidden shadow-2xl">
-      <div className="max-w-7xl mx-auto px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+    <section id="catalog-download" className="py-12 md:py-20 bg-black text-white rounded-[24px] md:rounded-[32px] mx-4 my-4 md:my-8 overflow-hidden shadow-2xl">
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-center">
           <div className="animate-reveal">
-            <div className="inline-flex items-center space-x-3 px-5 py-2 bg-white/10 border border-white/10 rounded-full mb-10">
-              <FileText size={14} className="text-white" />
-              <span className="text-[10px] font-semibold uppercase tracking-widest-custom">Export Portfolio 2025 v.4</span>
+            <div className="inline-flex items-center space-x-3 px-4 md:px-5 py-2 bg-white/10 border border-white/10 rounded-full mb-8 md:mb-10">
+              <FileText size={12} className="text-white" />
+              <span className="text-[9px] md:text-[10px] font-semibold uppercase tracking-widest-custom">Export Portfolio 2025 v.4</span>
             </div>
-            <h2 className="text-[42px] md:text-[64px] font-black mb-12 leading-[1.1] tracking-tight-custom">
+            <h2 className="text-[32px] sm:text-[42px] lg:text-[64px] font-black mb-8 md:mb-12 leading-[1.1] tracking-tight-custom">
               Download <br /><span className="opacity-30 font-serif italic font-light">The Catalog.</span>
             </h2>
-            <p className="text-neutral-400 text-xl mb-16 max-w-md font-light leading-relaxed">
+            <p className="text-neutral-400 text-base md:text-xl mb-10 md:mb-16 max-w-md font-light leading-relaxed">
               Explore our comprehensive collection of artisanal carry, including technical specs for the German professional sector.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6">
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
               <a 
                 href="https://slboverseas.com" 
                 target="_blank" 
@@ -38,7 +38,7 @@ const CatalogSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="relative group rounded-[32px] overflow-hidden border border-white/10 shadow-2xl">
+          <div className="relative group rounded-[24px] md:rounded-[32px] overflow-hidden border border-white/10 shadow-2xl">
             <img 
               src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&q=80&w=1200" 
               alt="SLB Overseas Portfolio Preview" 
