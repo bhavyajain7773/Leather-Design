@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { ArrowUpRight, Plus, Archive, Briefcase, ShoppingBag, Layers } from 'lucide-react';
 import { Product } from '../types';
 
+interface PortfolioPageProps {
+  setView: (view: 'home' | 'about' | 'contact' | 'portfolio') => void;
+}
+
 const portfolioProducts: Product[] = [
   { 
     id: '1', 
@@ -53,7 +57,7 @@ const portfolioProducts: Product[] = [
   }
 ];
 
-const PortfolioPage: React.FC = () => {
+const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
   const [active, setActive] = useState('All');
   const categories = ['All', 'Leather & Canvas', 'Fashion Bags', 'Lifestyle Essentials'];
 
@@ -141,7 +145,10 @@ const PortfolioPage: React.FC = () => {
                       <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
                       <span className="text-[8px] md:text-[9px] font-black uppercase tracking-widest-custom text-black/40">Ready for Export</span>
                    </div>
-                   <button className="flex items-center gap-2 text-[9px] md:text-[10px] font-black uppercase tracking-widest-custom text-black group-hover:translate-x-1 transition-transform">
+                   <button 
+                     onClick={() => setView('contact')}
+                     className="flex items-center gap-2 text-[9px] md:text-[10px] font-black uppercase tracking-widest-custom text-black group-hover:translate-x-1 transition-transform"
+                   >
                       <span>Inquire</span>
                       <ArrowUpRight size={14} />
                    </button>
@@ -166,7 +173,10 @@ const PortfolioPage: React.FC = () => {
               Beyond our curated portfolio, we offer full-scale private label manufacturing tailored to your brand's specific DNA and German quality standards.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
-               <button className="w-full sm:w-auto px-8 py-3 bg-white text-black rounded-full text-[12px] font-bold uppercase tracking-widest-custom hover:bg-neutral-200 transition-all">
+               <button 
+                 onClick={() => setView('contact')}
+                 className="w-full sm:w-auto px-8 py-3 bg-white text-black rounded-full text-[12px] font-bold uppercase tracking-widest-custom hover:bg-neutral-200 transition-all"
+               >
                  Request Consultation
                </button>
                <button className="w-full sm:w-auto px-8 py-3 border border-white/20 text-white rounded-full text-[12px] font-bold uppercase tracking-widest-custom hover:bg-white/10 transition-all">

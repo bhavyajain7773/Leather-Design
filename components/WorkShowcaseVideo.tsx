@@ -60,9 +60,11 @@ const WorkShowcaseVideo: React.FC = () => {
               aria-label={isPlaying ? "Pause video" : "Play video"}
             >
               {isPlaying ? (
-                <Pause size={18} md:size={20} className="text-white fill-white" />
+                /* Fix: Replaced invalid md:size prop with responsive Tailwind classes */
+                <Pause className="text-white fill-white w-[18px] h-[18px] md:w-5 md:h-5" />
               ) : (
-                <Play size={18} md:size={20} className="text-white fill-white translate-x-1" />
+                /* Fix: Replaced invalid md:size prop with responsive Tailwind classes */
+                <Play className="text-white fill-white translate-x-1 w-[18px] h-[18px] md:w-5 md:h-5" />
               )}
             </button>
           </div>

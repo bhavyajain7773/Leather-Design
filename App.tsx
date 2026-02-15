@@ -13,6 +13,7 @@ import ContactPage from './components/ContactPage';
 import PortfolioPage from './components/PortfolioPage';
 import AIDesignStudio from './components/AIDesignStudio';
 import AboutSummary from './components/AboutSummary';
+import ChatBot from './components/ChatBot';
 
 const App: React.FC = () => {
   const [view, setView] = useState<'home' | 'about' | 'contact' | 'portfolio'>('home');
@@ -31,7 +32,7 @@ const App: React.FC = () => {
             <Hero />
             <Stats />
             <AboutSummary onKnowMore={() => setView('about')} />
-            <CatalogSection />
+            <CatalogSection onSampleRequest={() => setView('contact')} />
             <ProductCollection onViewAll={() => setView('portfolio')} />
             <AIDesignStudio />
             <TeamSection />
@@ -41,12 +42,13 @@ const App: React.FC = () => {
         ) : view === 'about' ? (
           <AboutPage />
         ) : view === 'portfolio' ? (
-          <PortfolioPage />
+          <PortfolioPage setView={setView} />
         ) : (
           <ContactPage />
         )}
       </main>
-      <Footer />
+      <Footer setView={setView} />
+      <ChatBot setView={setView} />
     </div>
   );
 };

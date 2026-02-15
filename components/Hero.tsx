@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
         
         <div className="max-w-2xl mb-8 md:mb-12 animate-reveal" style={{ animationDelay: '0.3s' }}>
           <p className="text-[#666666] text-sm md:text-base font-medium leading-relaxed font-inter mx-auto px-4 md:px-0">
-            SLB OVERSEAS bridges artisanal Jodhpur craft with everyday practicality, delivering premium lifestyle essentials exclusively to the German market.
+            From the heritage looms of Jodhpur to the elite boutiques of Germany. SLB OVERSEAS translates centuries of artisanal leather mastery into precision-engineered artifacts for the global professional.
           </p>
         </div>
 

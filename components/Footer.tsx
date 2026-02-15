@@ -1,7 +1,11 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Instagram, Globe, ArrowUpRight } from 'lucide-react';
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  setView: (view: 'home' | 'about' | 'contact' | 'portfolio') => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ setView }) => {
   return (
     <footer id="logistics" className="bg-black text-white pt-20 md:pt-32 pb-12 md:pb-16">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
@@ -13,20 +17,41 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-6">
               <a href="https://slboverseas.com" className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all">
-                <Instagram size={18} md:size={20} />
+                <Instagram className="w-[18px] h-[18px] md:w-5 md:h-5" />
               </a>
               <a href="https://slboverseas.com" className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all">
-                <Globe size={18} md:size={20} />
+                <Globe className="w-[18px] h-[18px] md:w-5 md:h-5" />
               </a>
             </div>
           </div>
 
           <div>
-            <h4 className="text-[10px] md:text-[11px] font-semibold uppercase tracking-widest-custom mb-6 md:mb-10 text-neutral-500">Logistics</h4>
+            <h4 className="text-[10px] md:text-[11px] font-semibold uppercase tracking-widest-custom mb-6 md:mb-10 text-neutral-500">Navigation</h4>
             <ul className="space-y-4 md:space-y-6 text-[11px] md:text-sm font-semibold uppercase tracking-widest-custom">
-              <li><a href="https://slboverseas.com" className="hover:text-neutral-400 flex items-center gap-3 transition-colors">Port Network <ArrowUpRight size={14}/></a></li>
-              <li><a href="https://slboverseas.com" className="hover:text-neutral-400 flex items-center gap-3 transition-colors">OEM Workflow <ArrowUpRight size={14}/></a></li>
-              <li><a href="https://slboverseas.com" className="hover:text-neutral-400 flex items-center gap-3 transition-colors">Compliance <ArrowUpRight size={14}/></a></li>
+              <li>
+                <button 
+                  onClick={() => setView('home')} 
+                  className="hover:text-neutral-400 flex items-center gap-3 transition-colors uppercase outline-none"
+                >
+                  Home <ArrowUpRight size={14}/>
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => setView('about')} 
+                  className="hover:text-neutral-400 flex items-center gap-3 transition-colors uppercase outline-none"
+                >
+                  About <ArrowUpRight size={14}/>
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => setView('contact')} 
+                  className="hover:text-neutral-400 flex items-center gap-3 transition-colors uppercase outline-none"
+                >
+                  Contact <ArrowUpRight size={14}/>
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -46,7 +71,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="pt-12 md:pt-16 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8 md:gap-10 text-[9px] md:text-[10px] font-semibold uppercase tracking-widest-custom text-neutral-600 text-center md:text-left">
-          <span>© 2025 SLB OVERSEAS — Elite Manufacturing Heritage.</span>
+          <span>© 2026 SLB OVERSEAS — Elite Manufacturing Heritage.</span>
           <div className="flex space-x-8 md:space-x-12">
             <a href="https://slboverseas.com" className="hover:text-white transition-colors">Privacy</a>
             <a href="https://slboverseas.com" className="hover:text-white transition-colors">Terms</a>

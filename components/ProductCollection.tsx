@@ -83,7 +83,8 @@ const ProductCollection: React.FC<ProductCollectionProps> = ({ onViewAll }) => {
                 />
                 <div className="absolute top-4 md:top-8 right-4 md:right-8">
                    <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                      <Plus size={16} md:size={20} className="text-black" />
+                      {/* Fix: Replaced invalid md:size prop with responsive Tailwind classes */}
+                      <Plus className="text-black w-4 h-4 md:w-5 md:h-5" />
                    </div>
                 </div>
                 <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8">
@@ -100,7 +101,8 @@ const ProductCollection: React.FC<ProductCollectionProps> = ({ onViewAll }) => {
                 </div>
                 <div className="flex items-center space-x-2 md:space-x-3 text-[9px] md:text-[11px] font-semibold uppercase tracking-widest-custom group-hover:translate-x-2 transition-transform text-black">
                    <span>Details</span>
-                   <ArrowUpRight size={14} md:size={16} />
+                   {/* Fix: Replaced invalid md:size prop with responsive Tailwind classes */}
+                   <ArrowUpRight className="w-3.5 h-3.5 md:w-4 md:h-4" />
                 </div>
               </div>
             </div>

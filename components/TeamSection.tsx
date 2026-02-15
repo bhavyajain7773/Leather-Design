@@ -51,7 +51,8 @@ const TeamSection: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 animate-reveal" style={{ animationDelay: '0.4s' }}>
           <div className="p-6 md:p-8 rounded-[24px] md:rounded-[3rem] bg-black/5 border border-black/5 transition-all">
             <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white shadow-sm flex items-center justify-center mb-6 text-black">
-              <Factory size={18} md:size={20} />
+              {/* Fix: Replaced invalid md:size prop with responsive Tailwind classes */}
+              <Factory className="w-[18px] h-[18px] md:w-5 md:h-5" />
             </div>
             <h4 className="text-[10px] md:text-[11px] font-black uppercase tracking-widest-custom mb-3 md:mb-4">In-House Unit</h4>
             <p className="text-[12px] md:text-[13px] leading-relaxed opacity-60">Full control over tanning and stitching ensures zero quality deviation for our leather bag exclusive German shipments.</p>
@@ -59,7 +60,8 @@ const TeamSection: React.FC = () => {
 
           <div className="p-6 md:p-8 rounded-[24px] md:rounded-[3rem] bg-black/5 border border-black/5 transition-all">
             <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white shadow-sm flex items-center justify-center mb-6 text-black">
-              <Users size={18} md:size={20} />
+              {/* Fix: Replaced invalid md:size prop with responsive Tailwind classes */}
+              <Users className="w-[18px] h-[18px] md:w-5 md:h-5" />
             </div>
             <h4 className="text-[10px] md:text-[11px] font-black uppercase tracking-widest-custom mb-3 md:mb-4">Export Trained</h4>
             <p className="text-[12px] md:text-[13px] leading-relaxed opacity-60">Our workforce consists of 50+ artisans specializing in the unique precision and quality demands of the German leather market.</p>
@@ -67,7 +69,8 @@ const TeamSection: React.FC = () => {
 
           <div className="p-6 md:p-8 rounded-[24px] md:rounded-[3rem] bg-black/5 border border-black/5 transition-all">
             <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white shadow-sm flex items-center justify-center mb-6 text-black">
-              <ShieldCheck size={18} md:size={20} />
+              {/* Fix: Replaced invalid md:size prop with responsive Tailwind classes */}
+              <ShieldCheck className="w-[18px] h-[18px] md:w-5 md:h-5" />
             </div>
             <h4 className="text-[10px] md:text-[11px] font-black uppercase tracking-widest-custom mb-3 md:mb-4">SLB Certified</h4>
             <p className="text-[12px] md:text-[13px] leading-relaxed opacity-60">Every leather bag undergoes a 3-step inspection to meet rigorous European standards before packing.</p>

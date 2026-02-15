@@ -76,12 +76,14 @@ const ContactPage: React.FC = () => {
           <div className="space-y-8 md:space-y-12 animate-reveal" style={{ animationDelay: '0.2s' }}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
               <div className="p-6 md:p-8 bg-white border border-black/5 rounded-[24px] md:rounded-[32px] hover:shadow-lg transition-all">
-                <Phone size={18} md:size={20} className="text-black/20 mb-4 md:mb-6" />
+                {/* Fix: Replaced invalid md:size prop with responsive Tailwind classes */}
+                <Phone className="text-black/20 mb-4 md:mb-6 w-[18px] h-[18px] md:w-5 md:h-5" />
                 <p className="text-[9px] md:text-[10px] font-black uppercase tracking-widest-custom text-black/30 mb-2">Direct Line</p>
                 <p className="text-base md:text-lg font-bold">+91 7793003465</p>
               </div>
               <div className="p-6 md:p-8 bg-white border border-black/5 rounded-[24px] md:rounded-[32px] hover:shadow-lg transition-all">
-                <Mail size={18} md:size={20} className="text-black/20 mb-4 md:mb-6" />
+                {/* Fix: Replaced invalid md:size prop with responsive Tailwind classes */}
+                <Mail className="text-black/20 mb-4 md:mb-6 w-[18px] h-[18px] md:w-5 md:h-5" />
                 <p className="text-[9px] md:text-[10px] font-black uppercase tracking-widest-custom text-black/30 mb-2">Email Desk</p>
                 <p className="text-base md:text-lg font-bold break-all">slboverseas2025@gmail.com</p>
               </div>

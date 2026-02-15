@@ -17,7 +17,7 @@ const AboutSummary: React.FC<AboutSummaryProps> = ({ onKnowMore }) => {
             </h2>
             
             <p className="text-base md:text-lg text-black font-semibold leading-relaxed mb-6 md:mb-10 font-inter max-w-lg">
-              SLB OVERSEAS bridges artisanal Jodhpur craft with everyday practicality, delivering premium lifestyle essentials exclusively to the German market.
+              Precision engineered in Jodhpur. Exclusively exported to Germany. SLB OVERSEAS transforms traditional Rajasthani artistry into high-performance lifestyle essentials that define international standards.
             </p>
             
             <div className="space-y-6 md:space-y-8 text-sm md:text-base font-light text-[#666666] leading-relaxed mb-10 md:mb-16 max-w-lg font-inter">

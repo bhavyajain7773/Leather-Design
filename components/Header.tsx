@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { ChevronDown, Globe, Menu, X, ArrowUpRight } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Globe, Menu, X } from 'lucide-react';
 
 interface HeaderProps {
   setView: (view: 'home' | 'about' | 'contact' | 'portfolio') => void;
@@ -7,19 +7,7 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ setView, currentView }) => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const dropdownRef = useRef<HTMLLIElement>(null);
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsDropdownOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
 
   // Close mobile menu when view changes
   useEffect(() => {
@@ -30,24 +18,6 @@ const Header: React.FC<HeaderProps> = ({ setView, currentView }) => {
     `transition-colors outline-none text-[12px] font-semibold uppercase tracking-widest-custom ${
       isActive ? 'text-black' : 'text-[#666666] hover:text-black'
     }`;
-
-  const scrollToSection = (id: string) => {
-    setIsMobileMenuOpen(false);
-    if (currentView !== 'home') {
-      setView('home');
-      setTimeout(() => {
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-    } else {
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
 
   return (
     <>
@@ -70,34 +40,6 @@ const Header: React.FC<HeaderProps> = ({ setView, currentView }) => {
             <li>
               <button onClick={() => setView('portfolio')} className={navLinkClass(currentView === 'portfolio')}>Portfolio</button>
             </li>
-            
-            <li 
-              ref={dropdownRef}
-              className="relative h-full flex items-center"
-              onMouseEnter={() => setIsDropdownOpen(true)}
-              onMouseLeave={() => setIsDropdownOpen(false)}
-            >
-              <button 
-                className={`flex items-center space-x-1 ${navLinkClass(isDropdownOpen)}`}
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              >
-                <span>Manufacturing</span>
-                <ChevronDown size={10} className={`transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`} />
-              </button>
-
-              <div 
-                className={`absolute top-full left-0 mt-3 w-56 bg-white border border-black/5 rounded-2xl shadow-xl overflow-hidden transition-all duration-300 origin-top ${
-                  isDropdownOpen ? 'opacity-100 scale-100 translate-y-0 visible' : 'opacity-0 scale-95 -translate-y-2 invisible'
-                }`}
-              >
-                <div className="py-2">
-                  <button onClick={() => scrollToSection('heritage-blueprint')} className="w-full text-left block px-6 py-4 text-[10px] font-semibold uppercase tracking-widest-custom text-[#666666] hover:bg-black/5 hover:text-black transition-colors">Elite Grain Tier</button>
-                  <button onClick={() => scrollToSection('heritage-blueprint')} className="w-full text-left block px-6 py-4 text-[10px] font-semibold uppercase tracking-widest-custom text-[#666666] hover:bg-black/5 hover:text-black transition-colors">Structural Precision</button>
-                  <button onClick={() => scrollToSection('heritage-blueprint')} className="w-full text-left block px-6 py-4 text-[10px] font-semibold uppercase tracking-widest-custom text-[#666666] hover:bg-black/5 hover:text-black transition-colors">Reinforced Foundation</button>
-                </div>
-              </div>
-            </li>
-
             <li>
               <button onClick={() => setView('contact')} className={navLinkClass(currentView === 'contact')}>Contact</button>
             </li>
@@ -154,19 +96,12 @@ const Header: React.FC<HeaderProps> = ({ setView, currentView }) => {
             </button>
           </div>
 
-          <div className="mt-auto pb-12">
-            <p className="text-[10px] font-black uppercase tracking-widest-custom text-neutral-400 mb-6">Manufacturing Services</p>
-            <div className="flex flex-col space-y-4">
-              <button onClick={() => scrollToSection('heritage-blueprint')} className="text-sm font-bold flex items-center justify-between group">
-                Elite Grain Tier <ArrowUpRight size={14} className="opacity-40" />
-              </button>
-              <button onClick={() => scrollToSection('heritage-blueprint')} className="text-sm font-bold flex items-center justify-between group">
-                Structural Precision <ArrowUpRight size={14} className="opacity-40" />
-              </button>
-              <button onClick={() => scrollToSection('heritage-blueprint')} className="text-sm font-bold flex items-center justify-between group">
-                Reinforced Foundation <ArrowUpRight size={14} className="opacity-40" />
-              </button>
+          <div className="mt-auto pb-12 border-t border-neutral-100 pt-8">
+            <div className="flex flex-col space-y-2">
+              <a href="mailto:slboverseas2025@gmail.com" className="text-xs font-semibold text-neutral-500">slboverseas2025@gmail.com</a>
+              <a href="tel:+917793003465" className="text-xs font-semibold text-neutral-500">+91 7793003465</a>
             </div>
+            <p className="mt-6 text-[9px] font-black uppercase tracking-widest-custom text-neutral-300">© 2025 SLB OVERSEAS</p>
           </div>
         </div>
       </div>
