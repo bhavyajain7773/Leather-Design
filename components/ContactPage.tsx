@@ -1,7 +1,44 @@
-import React from 'react';
-import { Mail, Phone, MapPin, Send, Globe, MessageSquare } from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, Phone, MapPin, Send, MessageSquare, Loader2, CheckCircle, ArrowLeft } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSent, setIsSent] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Constructing the Gmail Compose URL
+    const recipient = "bhavyajain6564@gmail.com";
+    const subject = encodeURIComponent(formData.subject || "Export Inquiry - SLB Overseas");
+    const bodyContent = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
+    const body = encodeURIComponent(bodyContent);
+    
+    // This URL format triggers the Gmail web compose window directly
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${subject}&body=${body}`;
+
+    // Simulating a brief professional delay before redirect
+    setTimeout(() => {
+      window.open(gmailUrl, '_blank');
+      setIsSubmitting(false);
+      setIsSent(true);
+      // Reset form
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    }, 1200);
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
   return (
     <div className="bg-white text-black min-h-screen pt-24 md:pt-32 pb-12 md:pb-20">
       <div className="max-w-7xl mx-auto px-6">
@@ -23,66 +60,117 @@ const ContactPage: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           
-          {/* Inquiry Form */}
-          <div className="bg-neutral-50 p-8 md:p-12 rounded-[24px] md:rounded-[40px] border border-black/5 animate-reveal" style={{ animationDelay: '0.1s' }}>
-            <h3 className="text-[11px] md:text-[12px] font-black uppercase tracking-widest-custom text-black mb-8 md:mb-10">Export Inquiry Form</h3>
-            <form className="space-y-6 md:space-y-8" onSubmit={(e) => e.preventDefault()}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
-                <div className="space-y-2">
-                  <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest-custom text-black/40 ml-1">Full Name</label>
-                  <input 
-                    type="text" 
-                    placeholder="John Doe"
-                    className="w-full bg-transparent border-b border-black/10 py-2 md:py-3 outline-none focus:border-black transition-colors text-sm font-medium"
-                  />
+          {/* Inquiry Form Area */}
+          <div className="bg-neutral-50 p-8 md:p-12 rounded-[24px] md:rounded-[40px] border border-black/5 animate-reveal h-full flex flex-col justify-center min-h-[500px]" style={{ animationDelay: '0.1s' }}>
+            {!isSent ? (
+              <>
+                <h3 className="text-[11px] md:text-[12px] font-black uppercase tracking-widest-custom text-black mb-8 md:mb-10">Export Inquiry Form</h3>
+                <form className="space-y-6 md:space-y-8" onSubmit={handleSubmit}>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+                    <div className="space-y-2">
+                      <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest-custom text-black/40 ml-1">Full Name</label>
+                      <input 
+                        type="text" 
+                        name="name"
+                        required
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        placeholder="John Doe"
+                        className="w-full bg-transparent border-b border-black/10 py-2 md:py-3 outline-none focus:border-black transition-colors text-sm font-medium"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest-custom text-black/40 ml-1">Email Address</label>
+                      <input 
+                        type="email" 
+                        name="email"
+                        required
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        placeholder="john@company.de"
+                        className="w-full bg-transparent border-b border-black/10 py-2 md:py-3 outline-none focus:border-black transition-colors text-sm font-medium"
+                      />
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest-custom text-black/40 ml-1">Subject</label>
+                    <input 
+                      type="text" 
+                      name="subject"
+                      required
+                      value={formData.subject}
+                      onChange={handleInputChange}
+                      placeholder="OEM Production / Wholesale Inquiry"
+                      className="w-full bg-transparent border-b border-black/10 py-2 md:py-3 outline-none focus:border-black transition-colors text-sm font-medium"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest-custom text-black/40 ml-1">Message</label>
+                    <textarea 
+                      name="message"
+                      required
+                      rows={4}
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      placeholder="Tell us about your requirements..."
+                      className="w-full bg-transparent border-b border-black/10 py-2 md:py-3 outline-none focus:border-black transition-colors text-sm font-medium resize-none"
+                    />
+                  </div>
+                  
+                  <button 
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full sm:w-auto group flex items-center justify-center gap-4 px-10 py-4 bg-black text-white rounded-full text-[12px] font-semibold uppercase tracking-widest-custom hover:bg-neutral-800 transition-all shadow-xl disabled:opacity-50"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 size={16} className="animate-spin" />
+                        <span>Redirecting to Gmail...</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>Open in Gmail</span>
+                        <Send size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                      </>
+                    )}
+                  </button>
+                  <div className="flex items-center gap-2 mt-4 opacity-30">
+                    <div className="w-1 h-1 rounded-full bg-black" />
+                    <p className="text-[8px] font-black uppercase tracking-widest-custom text-black">
+                      Direct Dispatch: bhavyajain6564@gmail.com
+                    </p>
+                  </div>
+                </form>
+              </>
+            ) : (
+              <div className="text-center py-10 animate-reveal">
+                <div className="w-20 h-20 bg-black text-white rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl">
+                  <CheckCircle size={32} />
                 </div>
-                <div className="space-y-2">
-                  <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest-custom text-black/40 ml-1">Email Address</label>
-                  <input 
-                    type="email" 
-                    placeholder="john@company.de"
-                    className="w-full bg-transparent border-b border-black/10 py-2 md:py-3 outline-none focus:border-black transition-colors text-sm font-medium"
-                  />
-                </div>
+                <h3 className="text-3xl font-black tracking-tight-custom mb-4">Redirected.</h3>
+                <p className="text-neutral-500 font-medium mb-10 max-w-sm mx-auto leading-relaxed">
+                  A Gmail compose window has been opened with your details. Please click "Send" in Gmail to finalize your inquiry to our lead desk.
+                </p>
+                <button 
+                  onClick={() => setIsSent(false)}
+                  className="inline-flex items-center gap-3 px-8 py-3 bg-white border border-black text-black rounded-full text-[11px] font-bold uppercase tracking-widest-custom hover:bg-neutral-50 transition-all"
+                >
+                  <ArrowLeft size={14} />
+                  Return to Form
+                </button>
               </div>
-              <div className="space-y-2">
-                <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest-custom text-black/40 ml-1">Subject</label>
-                <input 
-                  type="text" 
-                  placeholder="OEM Production / Wholesale Inquiry"
-                  className="w-full bg-transparent border-b border-black/10 py-2 md:py-3 outline-none focus:border-black transition-colors text-sm font-medium"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest-custom text-black/40 ml-1">Message</label>
-                <textarea 
-                  rows={4}
-                  placeholder="Tell us about your requirements..."
-                  className="w-full bg-transparent border-b border-black/10 py-2 md:py-3 outline-none focus:border-black transition-colors text-sm font-medium resize-none"
-                />
-              </div>
-              
-              <button 
-                type="submit"
-                className="w-full sm:w-auto group flex items-center justify-center gap-4 px-8 py-3 bg-black text-white rounded-full text-[12px] font-semibold uppercase tracking-widest-custom hover:bg-neutral-800 transition-all shadow-xl"
-              >
-                <span>Send Message</span>
-                <Send size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-              </button>
-            </form>
+            )}
           </div>
 
           {/* Contact Details & Map */}
           <div className="space-y-8 md:space-y-12 animate-reveal" style={{ animationDelay: '0.2s' }}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
               <div className="p-6 md:p-8 bg-white border border-black/5 rounded-[24px] md:rounded-[32px] hover:shadow-lg transition-all">
-                {/* Fix: Replaced invalid md:size prop with responsive Tailwind classes */}
                 <Phone className="text-black/20 mb-4 md:mb-6 w-[18px] h-[18px] md:w-5 md:h-5" />
                 <p className="text-[9px] md:text-[10px] font-black uppercase tracking-widest-custom text-black/30 mb-2">Direct Line</p>
                 <p className="text-base md:text-lg font-bold">+91 7793003465</p>
               </div>
               <div className="p-6 md:p-8 bg-white border border-black/5 rounded-[24px] md:rounded-[32px] hover:shadow-lg transition-all">
-                {/* Fix: Replaced invalid md:size prop with responsive Tailwind classes */}
                 <Mail className="text-black/20 mb-4 md:mb-6 w-[18px] h-[18px] md:w-5 md:h-5" />
                 <p className="text-[9px] md:text-[10px] font-black uppercase tracking-widest-custom text-black/30 mb-2">Email Desk</p>
                 <p className="text-base md:text-lg font-bold break-all">slboverseas2025@gmail.com</p>
