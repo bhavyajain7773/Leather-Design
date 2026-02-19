@@ -107,7 +107,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ setView }) => {
           - Company: SLB OVERSEAS.
           - Specialty: Premium Leather & Canvas bags.
           - Primary Market: Germany.
-          - MOQ: 25-50 units.
+          - MOQ: 25 units.
           - Services: OEM, private label, custom manufacturing.
           Tone: Professional, elite, and premium.
           Answer queries briefly (under 50 words). If the query is too complex or requires a human, tell them to use the 'Talk to Admin' button.`,

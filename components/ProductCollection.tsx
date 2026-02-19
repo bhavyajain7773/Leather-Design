@@ -20,7 +20,7 @@ const products: Product[] = [
     name: 'Metro Satchel', 
     category: 'Leather & Canvas', 
     price: '€85.00', 
-    moq: '50 units', 
+    moq: '25 units', 
     imageUrl: 'https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&q=80&w=800' 
   },
   { 
@@ -28,7 +28,7 @@ const products: Product[] = [
     name: 'Elite Tote', 
     category: 'Fashion Bags', 
     price: '€110.00', 
-    moq: '30 units', 
+    moq: '25 units', 
     imageUrl: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&q=80&w=1200' 
   },
   { 
@@ -36,7 +36,7 @@ const products: Product[] = [
     name: 'Essential Duffel', 
     category: 'Lifestyle Essentials', 
     price: '€145.00', 
-    moq: '20 units', 
+    moq: '25 units', 
     imageUrl: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=800' 
   }
 ];
@@ -83,7 +83,6 @@ const ProductCollection: React.FC<ProductCollectionProps> = ({ onViewAll }) => {
                 />
                 <div className="absolute top-4 md:top-8 right-4 md:right-8">
                    <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                      {/* Fix: Replaced invalid md:size prop with responsive Tailwind classes */}
                       <Plus className="text-black w-4 h-4 md:w-5 md:h-5" />
                    </div>
                 </div>
@@ -101,7 +100,6 @@ const ProductCollection: React.FC<ProductCollectionProps> = ({ onViewAll }) => {
                 </div>
                 <div className="flex items-center space-x-2 md:space-x-3 text-[9px] md:text-[11px] font-semibold uppercase tracking-widest-custom group-hover:translate-x-2 transition-transform text-black">
                    <span>Details</span>
-                   {/* Fix: Replaced invalid md:size prop with responsive Tailwind classes */}
                    <ArrowUpRight className="w-3.5 h-3.5 md:w-4 md:h-4" />
                 </div>
               </div>

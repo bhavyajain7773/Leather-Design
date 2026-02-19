@@ -13,7 +13,7 @@ const Stats: React.FC = () => {
       sub: 'Genuine Hide Selection' 
     },
     { 
-      value: '2018', 
+      value: '2025', 
       label: 'Established', 
       sub: 'Excellence in Jodhpur' 
     },

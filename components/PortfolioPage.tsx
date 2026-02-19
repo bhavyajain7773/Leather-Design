@@ -20,7 +20,7 @@ const portfolioProducts: Product[] = [
     name: 'Metro Satchel', 
     category: 'Leather & Canvas', 
     price: '€85.00', 
-    moq: '50 units', 
+    moq: '25 units', 
     imageUrl: 'https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&q=80&w=800' 
   },
   { 
@@ -28,7 +28,7 @@ const portfolioProducts: Product[] = [
     name: 'Elite Tote', 
     category: 'Fashion Bags', 
     price: '€110.00', 
-    moq: '30 units', 
+    moq: '25 units', 
     imageUrl: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&q=80&w=1200' 
   },
   { 
@@ -36,7 +36,7 @@ const portfolioProducts: Product[] = [
     name: 'Essential Duffel', 
     category: 'Lifestyle Essentials', 
     price: '€145.00', 
-    moq: '20 units', 
+    moq: '25 units', 
     imageUrl: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=800' 
   },
   { 
@@ -44,7 +44,7 @@ const portfolioProducts: Product[] = [
     name: 'Urban Backpack', 
     category: 'Lifestyle Essentials', 
     price: '€95.00', 
-    moq: '40 units', 
+    moq: '25 units', 
     imageUrl: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&q=80&w=800' 
   },
   { 
@@ -52,7 +52,7 @@ const portfolioProducts: Product[] = [
     name: 'Crafted Portfolio', 
     category: 'Fashion Bags', 
     price: '€75.00', 
-    moq: '100 units', 
+    moq: '25 units', 
     imageUrl: 'https://images.unsplash.com/photo-1544465544-1b71aee9dfa3?auto=format&fit=crop&q=80&w=800' 
   }
 ];
