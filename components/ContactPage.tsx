@@ -16,7 +16,7 @@ const ContactPage: React.FC = () => {
     setIsSubmitting(true);
 
     // Constructing the Gmail Compose URL
-    const recipient = "bhavyajain6564@gmail.com";
+    const recipient = "slboverseas2025@gmail.com";
     const subject = encodeURIComponent(formData.subject || "Export Inquiry - SLB Overseas");
     const bodyContent = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
     const body = encodeURIComponent(bodyContent);
@@ -137,7 +137,7 @@ const ContactPage: React.FC = () => {
                   <div className="flex items-center gap-2 mt-4 opacity-30">
                     <div className="w-1 h-1 rounded-full bg-black" />
                     <p className="text-[8px] font-black uppercase tracking-widest-custom text-black">
-                      Direct Dispatch: bhavyajain6564@gmail.com
+                      Direct Dispatch: slboverseas2025@gmail.com
                     </p>
                   </div>
                 </form>
