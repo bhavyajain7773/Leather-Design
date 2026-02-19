@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, Plus, Archive, Briefcase, ShoppingBag, Layers } from 'lucide-react';
+import { Archive, Layers } from 'lucide-react';
 import { Product } from '../types';
 
 interface PortfolioPageProps {
@@ -9,51 +9,45 @@ interface PortfolioPageProps {
 const portfolioProducts: Product[] = [
   { 
     id: '1', 
-    name: 'Vanguard Messenger', 
+    name: '"Sel de Mer" Canvas Rucksack', 
     category: 'Leather & Canvas', 
-    price: '€125.00', 
     moq: '25 units', 
-    imageUrl: 'https://images.unsplash.com/photo-1524289286702-f07229da36f5?auto=format&fit=crop&q=80&w=800' 
+    imageUrl: 'https://drive.google.com/thumbnail?id=1W9TmunVWLGwrpzB92qOTk-4TmvKhJWeU&sz=w1200' 
   },
   { 
     id: '2', 
-    name: 'Metro Satchel', 
+    name: '"Vanguard" Star Messenger', 
     category: 'Leather & Canvas', 
-    price: '€85.00', 
     moq: '25 units', 
-    imageUrl: 'https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&q=80&w=800' 
+    imageUrl: 'https://drive.google.com/thumbnail?id=1zUfcgf8cReyDfoeLgEFgowYQb7fMZ5Tc&sz=w1200' 
   },
   { 
     id: '3', 
-    name: 'Elite Tote', 
-    category: 'Fashion Bags', 
-    price: '€110.00', 
+    name: '"Atelier" Tan Backpack', 
+    category: 'Leather & Canvas', 
     moq: '25 units', 
-    imageUrl: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&q=80&w=1200' 
+    imageUrl: 'https://drive.google.com/thumbnail?id=1ceHF-DUX-LOe22u56wcWOiC1w5E0qicO&sz=w1200' 
   },
   { 
     id: '4', 
-    name: 'Essential Duffel', 
-    category: 'Lifestyle Essentials', 
-    price: '€145.00', 
+    name: '"Manifesto" Star Tote', 
+    category: 'Fashion Bags', 
     moq: '25 units', 
-    imageUrl: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=800' 
+    imageUrl: 'https://drive.google.com/thumbnail?id=1Qt6sDsmPEnOGOe-aOSDg-bxEkp6ZPIMI&sz=w1200' 
   },
   { 
     id: '5', 
-    name: 'Urban Backpack', 
+    name: '"Sage" Heritage Carryall', 
     category: 'Lifestyle Essentials', 
-    price: '€95.00', 
     moq: '25 units', 
-    imageUrl: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&q=80&w=800' 
+    imageUrl: 'https://drive.google.com/thumbnail?id=1963Q3pKK90maxD6XJp1pVkO_b5VEZjkD&sz=w1200' 
   },
   { 
     id: '6', 
-    name: 'Crafted Portfolio', 
+    name: '"Fringe" Star Shopper', 
     category: 'Fashion Bags', 
-    price: '€75.00', 
     moq: '25 units', 
-    imageUrl: 'https://images.unsplash.com/photo-1544465544-1b71aee9dfa3?auto=format&fit=crop&q=80&w=800' 
+    imageUrl: 'https://drive.google.com/thumbnail?id=1P172Bcm8KEe6lo3_7DsK6TvkYbZfmMiL&sz=w1200' 
   }
 ];
 
@@ -115,15 +109,12 @@ const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
                   src={product.imageUrl} 
                   alt={product.name} 
                   className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&q=80&w=1200";
+                  }}
                 />
                 
-                <div className="absolute top-6 md:top-8 right-6 md:right-8">
-                  <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
-                    <Plus size={16} className="text-black" />
-                  </div>
-                </div>
-
-                <div className="absolute bottom-6 md:bottom-8 left-6 md:left-8 right-6 md:right-8">
+                <div className="absolute bottom-6 md:bottom-8 left-6 md:left-8 right-6 md:left-8">
                   <div className="flex justify-between items-center bg-white/90 backdrop-blur px-4 md:px-6 py-3 md:py-4 rounded-[1.5rem] md:rounded-[2rem] shadow-sm">
                     <span className="text-[8px] md:text-[9px] font-black uppercase tracking-widest-custom text-black/40">Min. Order</span>
                     <span className="text-[9px] md:text-[10px] font-bold text-black">{product.moq}</span>
@@ -137,7 +128,6 @@ const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
                     <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-black mb-1">{product.name}</h3>
                     <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-black/30">{product.category}</p>
                   </div>
-                  <p className="text-sm font-bold">{product.price}</p>
                 </div>
                 
                 <div className="pt-3 md:pt-4 border-t border-black/5 flex items-center justify-between">
@@ -145,13 +135,6 @@ const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
                       <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
                       <span className="text-[8px] md:text-[9px] font-black uppercase tracking-widest-custom text-black/40">Ready for Export</span>
                    </div>
-                   <button 
-                     onClick={() => setView('contact')}
-                     className="flex items-center gap-2 text-[9px] md:text-[10px] font-black uppercase tracking-widest-custom text-black group-hover:translate-x-1 transition-transform"
-                   >
-                      <span>Inquire</span>
-                      <ArrowUpRight size={14} />
-                   </button>
                 </div>
               </div>
             </div>
@@ -161,7 +144,7 @@ const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
         {/* Catalog CTA */}
         <div className="mt-16 md:mt-20 p-8 sm:p-16 md:p-24 bg-neutral-900 rounded-[32px] md:rounded-[60px] text-white overflow-hidden relative">
           <div className="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none hidden lg:block">
-             <Layers size={400} className="text-white -translate-y-20 translate-x-20 rotate-12" />
+             <Archive size={400} className="text-white -translate-y-20 translate-x-20 rotate-12" />
           </div>
           
           <div className="relative z-10 max-w-2xl">

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, Plus, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Product } from '../types';
 
 interface ProductCollectionProps {
@@ -9,35 +9,31 @@ interface ProductCollectionProps {
 const products: Product[] = [
   { 
     id: '1', 
-    name: 'Vanguard Messenger', 
+    name: '"Sel de Mer" Canvas Rucksack', 
     category: 'Leather & Canvas', 
-    price: '€125.00', 
     moq: '25 units', 
-    imageUrl: 'https://images.unsplash.com/photo-1524289286702-f07229da36f5?auto=format&fit=crop&q=80&w=800' 
+    imageUrl: 'https://drive.google.com/thumbnail?id=1W9TmunVWLGwrpzB92qOTk-4TmvKhJWeU&sz=w1200' 
   },
   { 
     id: '2', 
-    name: 'Metro Satchel', 
+    name: '"Vanguard" Star Messenger', 
     category: 'Leather & Canvas', 
-    price: '€85.00', 
     moq: '25 units', 
-    imageUrl: 'https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&q=80&w=800' 
+    imageUrl: 'https://drive.google.com/thumbnail?id=1zUfcgf8cReyDfoeLgEFgowYQb7fMZ5Tc&sz=w1200' 
   },
   { 
     id: '3', 
-    name: 'Elite Tote', 
-    category: 'Fashion Bags', 
-    price: '€110.00', 
+    name: '"Atelier" Tan Backpack', 
+    category: 'Leather & Canvas', 
     moq: '25 units', 
-    imageUrl: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&q=80&w=1200' 
+    imageUrl: 'https://drive.google.com/thumbnail?id=1ceHF-DUX-LOe22u56wcWOiC1w5E0qicO&sz=w1200' 
   },
   { 
     id: '4', 
-    name: 'Essential Duffel', 
-    category: 'Lifestyle Essentials', 
-    price: '€145.00', 
+    name: '"Manifesto" Star Tote', 
+    category: 'Fashion Bags', 
     moq: '25 units', 
-    imageUrl: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=800' 
+    imageUrl: 'https://drive.google.com/thumbnail?id=1Qt6sDsmPEnOGOe-aOSDg-bxEkp6ZPIMI&sz=w1200' 
   }
 ];
 
@@ -80,12 +76,10 @@ const ProductCollection: React.FC<ProductCollectionProps> = ({ onViewAll }) => {
                   src={product.imageUrl} 
                   alt={product.name} 
                   className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&q=80&w=1200";
+                  }}
                 />
-                <div className="absolute top-4 md:top-8 right-4 md:right-8">
-                   <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                      <Plus className="text-black w-4 h-4 md:w-5 md:h-5" />
-                   </div>
-                </div>
                 <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8">
                    <div className="px-4 md:px-6 py-2 md:py-3 bg-white/90 backdrop-blur rounded-full text-[8px] md:text-[10px] font-semibold uppercase tracking-widest-custom text-black">
                       MOQ: {product.moq}
@@ -93,15 +87,9 @@ const ProductCollection: React.FC<ProductCollectionProps> = ({ onViewAll }) => {
                 </div>
               </div>
               
-              <div className="flex justify-between items-end px-2 md:px-4">
-                <div>
-                  <h3 className="text-[20px] md:text-[28px] font-serif italic font-light mb-1 md:mb-2 text-black">{product.name}</h3>
-                  <p className="text-[9px] md:text-[11px] font-semibold uppercase tracking-widest-custom text-[#666666]">{product.category} • {product.price}</p>
-                </div>
-                <div className="flex items-center space-x-2 md:space-x-3 text-[9px] md:text-[11px] font-semibold uppercase tracking-widest-custom group-hover:translate-x-2 transition-transform text-black">
-                   <span>Details</span>
-                   <ArrowUpRight className="w-3.5 h-3.5 md:w-4 md:h-4" />
-                </div>
+              <div className="px-2 md:px-4">
+                <h3 className="text-[20px] md:text-[28px] font-serif italic font-light mb-1 md:mb-2 text-black">{product.name}</h3>
+                <p className="text-[9px] md:text-[11px] font-semibold uppercase tracking-widest-custom text-[#666666]">{product.category}</p>
               </div>
             </div>
           ))}

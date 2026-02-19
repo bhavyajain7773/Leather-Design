@@ -80,7 +80,7 @@ const AIDesignStudio: React.FC = () => {
                 key={patina}
                 src={finishImages[patina]} 
                 alt={`${patina} Leather Bag Profile`} 
-                className="w-full h-full object-cover transition-all duration-1000 animate-reveal grayscale group-hover:grayscale-0"
+                className="w-full h-full object-cover transition-all duration-1000 animate-reveal"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
               <div className="absolute bottom-6 md:bottom-12 left-6 md:left-12 right-6 md:right-12">

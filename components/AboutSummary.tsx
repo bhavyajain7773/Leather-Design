@@ -41,9 +41,13 @@ const AboutSummary: React.FC<AboutSummaryProps> = ({ onKnowMore }) => {
           <div className="relative animate-reveal order-1 lg:order-2" style={{ animationDelay: '0.2s' }}>
             <div className="aspect-[4/5] rounded-[24px] md:rounded-[32px] overflow-hidden border border-black/5 bg-neutral-100">
               <img 
-                src="https://images.unsplash.com/photo-1544465544-1b71aee9dfa3?auto=format&fit=crop&q=80&w=1200" 
-                alt="SLB OVERSEAS Atelier" 
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                src="https://drive.google.com/thumbnail?id=1gfav4qVwtEOc2DKwDBqJJwyfljXDNznD&sz=w1200" 
+                alt="SLB OVERSEAS Legacy Leather Bag" 
+                className="w-full h-full object-cover transition-all duration-700 hover:scale-105"
+                onError={(e) => {
+                  // Fallback to a high-end leather texture if the drive link fails
+                  (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1559563458-527698bf5295?auto=format&fit=crop&q=80&w=1200";
+                }}
               />
             </div>
           </div>

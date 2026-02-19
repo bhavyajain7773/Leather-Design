@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Download, FileText, ArrowRight } from 'lucide-react';
 
 interface CatalogSectionProps {
@@ -44,9 +44,9 @@ const CatalogSection: React.FC<CatalogSectionProps> = ({ onSampleRequest }) => {
 
           <div className="relative group rounded-[24px] md:rounded-[32px] overflow-hidden border border-white/10 shadow-2xl">
             <img 
-              src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&q=80&w=1200" 
+              src="https://drive.google.com/thumbnail?id=1963Q3pKK90maxD6XJp1pVkO_b5VEZjkD&sz=w1200" 
               alt="SLB Overseas Portfolio Preview" 
-              className="w-full aspect-[4/3] object-cover transition-all duration-1000 group-hover:scale-105 grayscale"
+              className="w-full aspect-[4/3] object-cover transition-all duration-1000 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           </div>

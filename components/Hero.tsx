@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
             <img 
               src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&q=80&w=2400" 
               alt="Premium SLB Overseas Leather" 
-              className="w-full h-full object-cover grayscale opacity-90 transition-transform duration-[4000ms] hover:scale-105"
+              className="w-full h-full object-cover opacity-90 transition-transform duration-[4000ms] hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent pointer-events-none" />
           </div>

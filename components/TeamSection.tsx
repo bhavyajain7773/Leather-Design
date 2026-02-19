@@ -24,7 +24,7 @@ const TeamSection: React.FC = () => {
             <img 
               src="https://images.unsplash.com/photo-1511406361295-0a5ff814c0e3?auto=format&fit=crop&q=80&w=2400" 
               alt="Artisans working on leather bags" 
-              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 mix-blend-multiply opacity-80"
+              className="w-full h-full object-cover transition-all duration-1000 mix-blend-multiply opacity-80"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             
@@ -51,7 +51,6 @@ const TeamSection: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 animate-reveal" style={{ animationDelay: '0.4s' }}>
           <div className="p-6 md:p-8 rounded-[24px] md:rounded-[3rem] bg-black/5 border border-black/5 transition-all">
             <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white shadow-sm flex items-center justify-center mb-6 text-black">
-              {/* Fix: Replaced invalid md:size prop with responsive Tailwind classes */}
               <Factory className="w-[18px] h-[18px] md:w-5 md:h-5" />
             </div>
             <h4 className="text-[10px] md:text-[11px] font-black uppercase tracking-widest-custom mb-3 md:mb-4">In-House Unit</h4>
@@ -60,7 +59,6 @@ const TeamSection: React.FC = () => {
 
           <div className="p-6 md:p-8 rounded-[24px] md:rounded-[3rem] bg-black/5 border border-black/5 transition-all">
             <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white shadow-sm flex items-center justify-center mb-6 text-black">
-              {/* Fix: Replaced invalid md:size prop with responsive Tailwind classes */}
               <Users className="w-[18px] h-[18px] md:w-5 md:h-5" />
             </div>
             <h4 className="text-[10px] md:text-[11px] font-black uppercase tracking-widest-custom mb-3 md:mb-4">Export Trained</h4>
@@ -69,7 +67,6 @@ const TeamSection: React.FC = () => {
 
           <div className="p-6 md:p-8 rounded-[24px] md:rounded-[3rem] bg-black/5 border border-black/5 transition-all">
             <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white shadow-sm flex items-center justify-center mb-6 text-black">
-              {/* Fix: Replaced invalid md:size prop with responsive Tailwind classes */}
               <ShieldCheck className="w-[18px] h-[18px] md:w-5 md:h-5" />
             </div>
             <h4 className="text-[10px] md:text-[11px] font-black uppercase tracking-widest-custom mb-3 md:mb-4">SLB Certified</h4>
