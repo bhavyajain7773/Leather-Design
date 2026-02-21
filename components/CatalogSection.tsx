@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
 import { Download, FileText, ArrowRight } from 'lucide-react';
+import DownloadModal from './DownloadModal';
 
 interface CatalogSectionProps {
   onSampleRequest?: () => void;
 }
 
 const CatalogSection: React.FC<CatalogSectionProps> = ({ onSampleRequest }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleDownload = () => {
+    // This will be called after form submission
+    const pdfUrl = 'https://slboverseas.com'; // Replace with actual PDF link
+    window.open(pdfUrl, '_blank');
+  };
+
   return (
     <section id="catalog-download" className="py-12 md:py-20 bg-black text-white rounded-[24px] md:rounded-[32px] mx-4 my-4 md:my-8 overflow-hidden shadow-2xl">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
@@ -23,15 +32,13 @@ const CatalogSection: React.FC<CatalogSectionProps> = ({ onSampleRequest }) => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
-              <a 
-                href="https://slboverseas.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="group flex items-center justify-center space-x-4 px-8 py-3 bg-white text-black rounded-full hover:bg-neutral-200 transition-all shadow-2xl"
+              <button 
+                onClick={() => setIsModalOpen(true)}
+                className="group flex items-center justify-center space-x-4 px-8 py-3 bg-white text-black rounded-full hover:bg-neutral-200 transition-all shadow-2xl outline-none"
               >
                 <Download size={20} />
                 <span className="text-[12px] font-semibold uppercase tracking-widest-custom">Get PDF Collection</span>
-              </a>
+              </button>
               <button 
                 onClick={onSampleRequest}
                 className="group flex items-center justify-center space-x-4 px-8 py-3 bg-transparent border border-white/20 text-white rounded-full hover:bg-white/10 transition-all outline-none"
@@ -52,6 +59,12 @@ const CatalogSection: React.FC<CatalogSectionProps> = ({ onSampleRequest }) => {
           </div>
         </div>
       </div>
+
+      <DownloadModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        onSuccess={handleDownload}
+      />
     </section>
   );
 };
