@@ -13,7 +13,7 @@ const CatalogSection: React.FC<CatalogSectionProps> = ({ onSampleRequest }) => {
           <div className="animate-reveal">
             <div className="inline-flex items-center space-x-3 px-4 md:px-5 py-2 bg-white/10 border border-white/10 rounded-full mb-8 md:mb-10">
               <FileText size={12} className="text-white" />
-              <span className="text-[9px] md:text-[10px] font-semibold uppercase tracking-widest-custom">Export Portfolio 2026 v.1</span>
+              <span className="text-[9px] md:text-[10px] font-semibold uppercase tracking-widest-custom">Export Portfolio 2026 v.2</span>
             </div>
             <h2 className="text-[32px] sm:text-[42px] lg:text-[64px] font-black mb-8 md:mb-12 leading-[1.1] tracking-tight-custom">
               Download <br /><span className="opacity-30 font-serif italic font-light">The Catalog.</span>

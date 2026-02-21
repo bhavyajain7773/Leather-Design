@@ -14,9 +14,12 @@ import PortfolioPage from './components/PortfolioPage';
 import AIDesignStudio from './components/AIDesignStudio';
 import AboutSummary from './components/AboutSummary';
 import ChatBot from './components/ChatBot';
+import GalleryPage from './components/GalleryPage';
+import PrivacyPage from './components/PrivacyPage';
+import TermsPage from './components/TermsPage';
 
 const App: React.FC = () => {
-  const [view, setView] = useState<'home' | 'about' | 'contact' | 'portfolio'>('home');
+  const [view, setView] = useState<'home' | 'about' | 'contact' | 'portfolio' | 'gallery' | 'privacy' | 'terms'>('home');
 
   // Ensure scroll to top on view change
   useEffect(() => {
@@ -43,6 +46,12 @@ const App: React.FC = () => {
           <AboutPage />
         ) : view === 'portfolio' ? (
           <PortfolioPage setView={setView} />
+        ) : view === 'gallery' ? (
+          <GalleryPage />
+        ) : view === 'privacy' ? (
+          <PrivacyPage />
+        ) : view === 'terms' ? (
+          <TermsPage />
         ) : (
           <ContactPage />
         )}

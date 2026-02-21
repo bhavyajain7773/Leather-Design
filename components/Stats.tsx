@@ -18,7 +18,7 @@ const Stats: React.FC = () => {
       sub: 'Excellence in Jodhpur' 
     },
     { 
-      value: '2k+', 
+      value: '1k+', 
       label: 'SKUs', 
       sub: 'Customizable Designs' 
     },

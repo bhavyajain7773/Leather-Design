@@ -2,7 +2,7 @@ import React from 'react';
 import { Mail, Phone, MapPin, Instagram, Globe, ArrowUpRight } from 'lucide-react';
 
 interface FooterProps {
-  setView: (view: 'home' | 'about' | 'contact' | 'portfolio') => void;
+  setView: (view: 'home' | 'about' | 'contact' | 'portfolio' | 'gallery' | 'privacy' | 'terms') => void;
 }
 
 const Footer: React.FC<FooterProps> = ({ setView }) => {
@@ -46,6 +46,22 @@ const Footer: React.FC<FooterProps> = ({ setView }) => {
               </li>
               <li>
                 <button 
+                  onClick={() => setView('portfolio')} 
+                  className="hover:text-neutral-400 flex items-center gap-3 transition-colors uppercase outline-none"
+                >
+                  Portfolio <ArrowUpRight size={14}/>
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => setView('gallery')} 
+                  className="hover:text-neutral-400 flex items-center gap-3 transition-colors uppercase outline-none"
+                >
+                  Gallery <ArrowUpRight size={14}/>
+                </button>
+              </li>
+              <li>
+                <button 
                   onClick={() => setView('contact')} 
                   className="hover:text-neutral-400 flex items-center gap-3 transition-colors uppercase outline-none"
                 >
@@ -73,8 +89,8 @@ const Footer: React.FC<FooterProps> = ({ setView }) => {
         <div className="pt-12 md:pt-16 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8 md:gap-10 text-[9px] md:text-[10px] font-semibold uppercase tracking-widest-custom text-neutral-600 text-center md:text-left">
           <span>© 2026 SLB OVERSEAS — Elite Manufacturing Heritage.</span>
           <div className="flex space-x-8 md:space-x-12">
-            <a href="https://slboverseas.com" className="hover:text-white transition-colors">Privacy</a>
-            <a href="https://slboverseas.com" className="hover:text-white transition-colors">Terms</a>
+            <button onClick={() => setView('privacy')} className="hover:text-white transition-colors outline-none uppercase">Privacy</button>
+            <button onClick={() => setView('terms')} className="hover:text-white transition-colors outline-none uppercase">Terms</button>
           </div>
         </div>
       </div>

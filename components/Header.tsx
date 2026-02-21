@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Globe, Menu, X } from 'lucide-react';
 
 interface HeaderProps {
-  setView: (view: 'home' | 'about' | 'contact' | 'portfolio') => void;
-  currentView: 'home' | 'about' | 'contact' | 'portfolio';
+  setView: (view: 'home' | 'about' | 'contact' | 'portfolio' | 'gallery' | 'privacy' | 'terms') => void;
+  currentView: 'home' | 'about' | 'contact' | 'portfolio' | 'gallery' | 'privacy' | 'terms';
 }
 
 const Header: React.FC<HeaderProps> = ({ setView, currentView }) => {
@@ -39,6 +39,9 @@ const Header: React.FC<HeaderProps> = ({ setView, currentView }) => {
             </li>
             <li>
               <button onClick={() => setView('portfolio')} className={navLinkClass(currentView === 'portfolio')}>Portfolio</button>
+            </li>
+            <li>
+              <button onClick={() => setView('gallery')} className={navLinkClass(currentView === 'gallery')}>Gallery</button>
             </li>
             <li>
               <button onClick={() => setView('contact')} className={navLinkClass(currentView === 'contact')}>Contact</button>
@@ -87,6 +90,12 @@ const Header: React.FC<HeaderProps> = ({ setView, currentView }) => {
               className={`text-4xl font-black tracking-tight-custom text-left ${currentView === 'portfolio' ? 'text-black' : 'text-neutral-300'}`}
             >
               Portfolio
+            </button>
+            <button 
+              onClick={() => setView('gallery')} 
+              className={`text-4xl font-black tracking-tight-custom text-left ${currentView === 'gallery' ? 'text-black' : 'text-neutral-300'}`}
+            >
+              Gallery
             </button>
             <button 
               onClick={() => setView('contact')} 
