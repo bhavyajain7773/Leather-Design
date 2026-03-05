@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { X, CheckCircle2, Loader2 } from 'lucide-react';
+import { supabase } from '../src/lib/supabase';
 
 interface DownloadModalProps {
   isOpen: boolean;
@@ -21,19 +22,33 @@ const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose, onSucces
     phone: '',
     country: 'Germany'
   });
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('submitting');
+    setErrorMessage('');
     
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      const { error } = await supabase
+        .from('pdf_requests')
+        .insert([
+          { 
+            full_name: formData.name, 
+            email: formData.email, 
+            phone_number: formData.phone, 
+            location: formData.country,
+            created_at: new Date().toISOString()
+          }
+        ]);
+
+      if (error) throw error;
+
       setStatus('success');
-      // In a real app, you'd send this data to your backend/CRM here
-      console.log('Lead Captured:', formData);
+      console.log('Lead Captured in Supabase:', formData);
       
       setTimeout(() => {
         onSuccess();
@@ -41,7 +56,15 @@ const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose, onSucces
         setStatus('idle');
         setFormData({ name: '', email: '', phone: '', country: 'Germany' });
       }, 1500);
-    }, 1500);
+    } catch (err: any) {
+      console.error('Supabase Error:', err);
+      setStatus('error');
+      setErrorMessage(err.message || 'Failed to submit request. Please try again.');
+      
+      // Fallback to success for demo if table doesn't exist yet, 
+      // but in a real integration we want to show the error.
+      // However, the user asked for a REAL integration.
+    }
   };
 
   return (
@@ -141,6 +164,12 @@ const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose, onSucces
                     <span>Request Access</span>
                   )}
                 </button>
+
+                {status === 'error' && (
+                  <p className="text-red-500 text-[10px] text-center font-semibold uppercase tracking-widest-custom">
+                    {errorMessage}
+                  </p>
+                )}
                 
                 <p className="text-[9px] text-center text-black/50 uppercase tracking-widest-custom">
                   By clicking, you agree to our privacy terms.

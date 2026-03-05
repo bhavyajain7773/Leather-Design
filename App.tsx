@@ -5,13 +5,11 @@ import Stats from './components/Stats';
 import CatalogSection from './components/CatalogSection';
 import ProductCollection from './components/ProductCollection';
 import TeamSection from './components/TeamSection';
-import WorkShowcaseVideo from './components/WorkShowcaseVideo';
 import LocationSection from './components/LocationSection';
 import Footer from './components/Footer';
 import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
 import PortfolioPage from './components/PortfolioPage';
-import AIDesignStudio from './components/AIDesignStudio';
 import AboutSummary from './components/AboutSummary';
 import ChatBot from './components/ChatBot';
 import GalleryPage from './components/GalleryPage';
@@ -37,9 +35,7 @@ const App: React.FC = () => {
             <AboutSummary onKnowMore={() => setView('about')} />
             <CatalogSection onSampleRequest={() => setView('contact')} />
             <ProductCollection onViewAll={() => setView('portfolio')} />
-            <AIDesignStudio />
             <TeamSection />
-            <WorkShowcaseVideo />
             <LocationSection />
           </>
         ) : view === 'about' ? (
