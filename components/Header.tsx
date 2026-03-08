@@ -25,12 +25,15 @@ const Header: React.FC<HeaderProps> = ({ setView, currentView }) => {
         <nav className="glass-light rounded-full px-6 md:px-10 h-14 flex items-center justify-between shadow-sm">
           <button 
             onClick={() => setView('home')}
-            className="flex items-center space-x-2 md:space-x-3 outline-none group"
+            className="flex items-center space-x-3 outline-none group"
           >
-            <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center shrink-0">
-               <Globe size={12} className="text-white" />
-            </div>
-            <span className="text-[12px] md:text-[14px] font-semibold uppercase tracking-tight-custom text-black whitespace-nowrap">SLB Overseas</span>
+            <img 
+              src="https://drive.google.com/thumbnail?id=1JDfZZCSY7SgPfcuZYF0n5hj5ADg42i6L&sz=w1200" 
+              alt="SLB Overseas Logo" 
+              className="h-8 md:h-10 w-auto object-contain"
+              referrerPolicy="no-referrer"
+            />
+            <span className="text-[14px] md:text-[16px] font-black uppercase tracking-widest-custom text-black">Overseas</span>
           </button>
           
           <ul className="hidden lg:flex items-center space-x-10">

@@ -9,7 +9,7 @@ interface ProductCollectionProps {
 const products: Product[] = [
   { 
     id: '1', 
-    name: '"Sel de Mer" Canvas Rucksack', 
+    name: 'SEL DE MER BACKBACK BAG', 
     category: 'Leather & Canvas', 
     moq: '25 units', 
     imageUrl: 'https://drive.google.com/thumbnail?id=1W9TmunVWLGwrpzB92qOTk-4TmvKhJWeU&sz=w1200' 

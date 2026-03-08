@@ -91,10 +91,7 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
           
-          <a href="https://slboverseas.com" className="w-full sm:w-auto inline-flex items-center justify-center gap-6 px-8 py-3 bg-black text-white rounded-full text-[12px] font-semibold uppercase tracking-widest-custom hover:bg-neutral-800 transition-all shadow-xl">
-            <span>Download Compliance Report</span>
-            <ArrowRight size={16}/>
-          </a>
+          {/* Button removed as per request */}
         </div>
       </section>
     </div>

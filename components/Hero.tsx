@@ -1,7 +1,11 @@
 import React from 'react';
 import { ArrowRight, Globe } from 'lucide-react';
 
-const Hero: React.FC = () => {
+interface HeroProps {
+  onOEMRequest: () => void;
+}
+
+const Hero: React.FC<HeroProps> = ({ onOEMRequest }) => {
   return (
     <section className="relative pt-28 md:pt-32 pb-12 md:pb-16 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 flex flex-col items-center text-center">
@@ -31,12 +35,12 @@ const Hero: React.FC = () => {
             <span className="text-[12px] font-semibold uppercase tracking-widest-custom">Export Portfolio</span>
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
           </a>
-          <a 
-            href="https://slboverseas.com"
+          <button 
+            onClick={onOEMRequest}
             className="w-full sm:w-auto flex items-center justify-center px-8 py-3 bg-white border border-black text-black rounded-full text-[12px] font-semibold uppercase tracking-widest-custom hover:bg-neutral-50 transition-all"
           >
             OEM Request
-          </a>
+          </button>
         </div>
 
         <div className="mt-12 md:mt-16 w-full relative animate-reveal" style={{ animationDelay: '0.5s' }}>

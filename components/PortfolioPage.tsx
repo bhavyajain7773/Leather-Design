@@ -9,7 +9,7 @@ interface PortfolioPageProps {
 const portfolioProducts: Product[] = [
   { 
     id: '1', 
-    name: '"Sel de Mer" Canvas Rucksack', 
+    name: 'SEL DE MER BACKBACK BAG', 
     category: 'Leather & Canvas', 
     moq: '25 units', 
     imageUrl: 'https://drive.google.com/thumbnail?id=1W9TmunVWLGwrpzB92qOTk-4TmvKhJWeU&sz=w1200' 
@@ -37,7 +37,7 @@ const portfolioProducts: Product[] = [
   },
   { 
     id: '5', 
-    name: '"Sage" Heritage Carryall', 
+    name: 'SEL DE MER TOTE BAG', 
     category: 'Lifestyle Essentials', 
     moq: '25 units', 
     imageUrl: 'https://drive.google.com/thumbnail?id=1963Q3pKK90maxD6XJp1pVkO_b5VEZjkD&sz=w1200' 

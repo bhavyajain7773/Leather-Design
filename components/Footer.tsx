@@ -11,15 +11,23 @@ const Footer: React.FC<FooterProps> = ({ setView }) => {
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-20 mb-20 md:32">
           <div className="lg:col-span-2">
-            <div className="text-[28px] md:text-[32px] font-semibold uppercase font-serif tracking-tight-custom mb-6 md:mb-10">SLB OVERSEAS.</div>
+            <div className="mb-6 md:mb-10 flex items-center space-x-4">
+              <img 
+                src="https://drive.google.com/thumbnail?id=1JDfZZCSY7SgPfcuZYF0n5hj5ADg42i6L&sz=w1200" 
+                alt="SLB Overseas Logo" 
+                className="h-12 md:h-16 w-auto object-contain invert"
+                referrerPolicy="no-referrer"
+              />
+              <span className="text-[20px] md:text-[24px] font-black uppercase tracking-widest-custom text-white">Overseas</span>
+            </div>
             <p className="text-neutral-400 text-base md:text-xl max-w-sm leading-relaxed mb-8 md:mb-12 font-inter font-light">
               Premium manufacturer and exporter of leather artifacts from Jodhpur to Germany.
             </p>
             <div className="flex space-x-6">
-              <a href="https://slboverseas.com" className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all">
+              <a href="#" className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all">
                 <Instagram className="w-[18px] h-[18px] md:w-5 md:h-5" />
               </a>
-              <a href="https://slboverseas.com" className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all">
+              <a href="#" className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all">
                 <Globe className="w-[18px] h-[18px] md:w-5 md:h-5" />
               </a>
             </div>

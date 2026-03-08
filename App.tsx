@@ -30,7 +30,7 @@ const App: React.FC = () => {
       <main className="flex-grow">
         {view === 'home' ? (
           <>
-            <Hero />
+            <Hero onOEMRequest={() => setView('contact')} />
             <Stats />
             <AboutSummary onKnowMore={() => setView('about')} />
             <CatalogSection onSampleRequest={() => setView('contact')} />
