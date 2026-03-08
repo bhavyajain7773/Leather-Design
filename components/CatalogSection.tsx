@@ -11,8 +11,8 @@ const CatalogSection: React.FC<CatalogSectionProps> = ({ onSampleRequest }) => {
 
   const handleDownload = () => {
     // This will be called after form submission
-    const pdfUrl = 'https://slboverseas.com'; // Replace with actual PDF link
-    window.open(pdfUrl, '_blank');
+    const pdfUrl = 'https://drive.google.com/file/d/1YF9uc5ZRhBWmW4GnJKurhb79GdZxQ9nk/view';
+    window.location.href = pdfUrl;
   };
 
   return (
