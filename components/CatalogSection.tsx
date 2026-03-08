@@ -20,10 +20,13 @@ const CatalogSection: React.FC<CatalogSectionProps> = ({ onSampleRequest }) => {
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-center">
           <div className="animate-reveal">
-            <div className="inline-flex items-center space-x-3 px-4 md:px-5 py-2 bg-white/10 border border-white/10 rounded-full mb-8 md:mb-10">
+            <a 
+              href="https://drive.google.com/file/d/1TXdkHu7mr4H1MZaXN2OBV4LUIGM7Icc0/view"
+              className="inline-flex items-center space-x-3 px-4 md:px-5 py-2 bg-white/10 border border-white/10 rounded-full mb-8 md:mb-10 hover:bg-white/20 transition-all cursor-pointer"
+            >
               <FileText size={12} className="text-white" />
               <span className="text-[9px] md:text-[10px] font-semibold uppercase tracking-widest-custom">Export Portfolio 2026 v.2</span>
-            </div>
+            </a>
             <h2 className="text-[32px] sm:text-[42px] lg:text-[64px] font-black mb-8 md:mb-12 leading-[1.1] tracking-tight-custom">
               Download <br /><span className="opacity-30 font-serif italic font-light">The Catalog.</span>
             </h2>

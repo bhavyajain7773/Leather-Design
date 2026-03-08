@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
 
         <div className="w-full sm:w-auto flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8 animate-reveal" style={{ animationDelay: '0.4s' }}>
           <a 
-            href="https://slboverseas.com"
+            href="https://drive.google.com/file/d/1TXdkHu7mr4H1MZaXN2OBV4LUIGM7Icc0/view"
             className="w-full sm:w-auto group flex items-center justify-center space-x-4 px-8 py-3 bg-black text-white rounded-full hover:bg-neutral-800 transition-all shadow-lg"
           >
             <span className="text-[12px] font-semibold uppercase tracking-widest-custom">Export Portfolio</span>
