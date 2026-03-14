@@ -46,9 +46,10 @@ const Hero: React.FC<HeroProps> = ({ onOEMRequest }) => {
         <div className="mt-12 md:mt-16 w-full relative animate-reveal" style={{ animationDelay: '0.5s' }}>
           <div className="relative rounded-[24px] md:rounded-[32px] overflow-hidden bg-neutral-100 border border-black/5 aspect-[16/9] md:aspect-[21/9]">
             <img 
-              src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&q=80&w=2400" 
+              src="https://drive.google.com/thumbnail?id=1C-mL5_6gQmybpECQiPTyK2PGJB9tbr5b&sz=w2400" 
               alt="Premium SLB Overseas Leather" 
               className="w-full h-full object-cover opacity-90 transition-transform duration-[4000ms] hover:scale-105"
+              referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent pointer-events-none" />
           </div>

@@ -38,7 +38,7 @@ const portfolioProducts: Product[] = [
   { 
     id: '5', 
     name: 'SEL DE MER TOTE BAG', 
-    category: 'Lifestyle Essentials', 
+    category: 'Fashion Bags', 
     moq: '25 units', 
     imageUrl: 'https://drive.google.com/thumbnail?id=1963Q3pKK90maxD6XJp1pVkO_b5VEZjkD&sz=w1200' 
   },
@@ -53,7 +53,7 @@ const portfolioProducts: Product[] = [
 
 const PortfolioPage: React.FC<PortfolioPageProps> = ({ setView }) => {
   const [active, setActive] = useState('All');
-  const categories = ['All', 'Leather & Canvas', 'Fashion Bags', 'Lifestyle Essentials'];
+  const categories = ['All', 'Leather & Canvas', 'Fashion Bags'];
 
   const filteredProducts = active === 'All' 
     ? portfolioProducts 

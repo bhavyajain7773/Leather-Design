@@ -39,7 +39,7 @@ const products: Product[] = [
 
 const ProductCollection: React.FC<ProductCollectionProps> = ({ onViewAll }) => {
   const [active, setActive] = useState('All');
-  const categories = ['All', 'Leather & Canvas', 'Fashion Bags', 'Lifestyle Essentials'];
+  const categories = ['All', 'Leather & Canvas', 'Fashion Bags'];
 
   const filteredProducts = active === 'All' 
     ? products 
