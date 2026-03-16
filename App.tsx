@@ -11,7 +11,6 @@ import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
 import PortfolioPage from './components/PortfolioPage';
 import AboutSummary from './components/AboutSummary';
-import ChatBot from './components/ChatBot';
 import GalleryPage from './components/GalleryPage';
 import PrivacyPage from './components/PrivacyPage';
 import TermsPage from './components/TermsPage';
@@ -53,7 +52,6 @@ const App: React.FC = () => {
         )}
       </main>
       <Footer setView={setView} />
-      <ChatBot setView={setView} />
     </div>
   );
 };
