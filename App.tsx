@@ -4,7 +4,6 @@ import Hero from './components/Hero';
 import Stats from './components/Stats';
 import CatalogSection from './components/CatalogSection';
 import ProductCollection from './components/ProductCollection';
-import TeamSection from './components/TeamSection';
 import LocationSection from './components/LocationSection';
 import Footer from './components/Footer';
 import AboutPage from './components/AboutPage';
@@ -34,7 +33,6 @@ const App: React.FC = () => {
             <AboutSummary onKnowMore={() => setView('about')} />
             <CatalogSection onSampleRequest={() => setView('contact')} />
             <ProductCollection onViewAll={() => setView('portfolio')} />
-            <TeamSection />
             <LocationSection />
           </>
         ) : view === 'about' ? (

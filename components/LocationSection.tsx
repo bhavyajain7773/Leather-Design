@@ -27,12 +27,11 @@ const LocationSection: React.FC = () => {
             </div>
             
             <a 
-              href="https://maps.google.com" 
+              href="https://www.google.com/maps/dir/?api=1&destination=J-231+Pratap+Nagar+Jodhpur+India" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="absolute bottom-4 md:bottom-6 right-4 md:right-6 w-10 h-10 md:w-12 md:h-12 rounded-full bg-black text-white flex items-center justify-center shadow-xl hover:scale-110 transition-transform"
+              className="absolute bottom-4 md:bottom-6 right-4 md:right-6 w-10 h-10 md:w-12 md:h-12 rounded-full bg-black text-white flex items-center justify-center shadow-xl hover:scale-110 transition-transform z-10"
             >
-              {/* Fix: Replaced invalid md:size prop with responsive Tailwind classes */}
               <ExternalLink className="w-4 h-4 md:w-[18px] md:h-[18px]" />
             </a>
           </div>
@@ -40,7 +39,6 @@ const LocationSection: React.FC = () => {
           <div className="flex flex-col justify-center p-8 lg:p-12 bg-black/5 rounded-[24px] md:rounded-[3rem] border border-black/5 animate-reveal" style={{ animationDelay: '0.2s' }}>
             <div className="mb-6 md:mb-8">
               <div className="flex items-center gap-3 mb-3 md:mb-4">
-                {/* Fix: Replaced invalid md:size prop with responsive Tailwind classes */}
                 <Building2 className="text-black/20 w-[18px] h-[18px] md:w-5 md:h-5" />
                 <h3 className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] text-black/30">Company Registry</h3>
               </div>
@@ -51,18 +49,22 @@ const LocationSection: React.FC = () => {
             </div>
 
             <div className="space-y-6">
-              <div className="flex items-start gap-4 md:gap-6 group">
+              <a 
+                href="https://www.google.com/maps/dir/?api=1&destination=J-231+Pratap+Nagar+Jodhpur+India"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-4 md:gap-6 group"
+              >
                 <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center border border-black/5 shadow-sm group-hover:bg-black group-hover:text-white transition-colors shrink-0">
-                  {/* Fix: Replaced invalid md:size prop with responsive Tailwind classes */}
                   <MapPin className="w-4 h-4 md:w-[18px] md:h-[18px]" />
                 </div>
                 <div>
                   <p className="text-[9px] md:text-[10px] font-black uppercase tracking-widest-custom text-black/30 mb-0.5 md:mb-1">Our Facility</p>
-                  <p className="text-xs md:text-sm font-bold leading-relaxed max-w-xs">
+                  <p className="text-xs md:text-sm font-bold leading-relaxed max-w-xs group-hover:underline decoration-black/20 underline-offset-4">
                     J-231 Pratap Nagar, Jodhpur, India.
                   </p>
                 </div>
-              </div>
+              </a>
 
               <div className="flex items-start gap-4 md:gap-6 group">
                 <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center border border-black/5 shadow-sm group-hover:bg-black group-hover:text-white transition-colors shrink-0">
