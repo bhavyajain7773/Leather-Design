@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Instagram, Globe, ArrowUpRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, ArrowUpRight, Facebook, Linkedin, Pin as Pinterest } from 'lucide-react';
 
 interface FooterProps {
   setView: (view: 'home' | 'about' | 'contact' | 'portfolio' | 'gallery' | 'privacy' | 'terms') => void;
@@ -23,12 +23,44 @@ const Footer: React.FC<FooterProps> = ({ setView }) => {
             <p className="text-neutral-400 text-base md:text-xl max-w-sm leading-relaxed mb-8 md:mb-12 font-inter font-light">
               Premium manufacturer and exporter of leather artifacts from Jodhpur to Germany.
             </p>
-            <div className="flex space-x-6">
-              <a href="#" className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all">
+            <div className="flex flex-wrap gap-4 md:gap-6">
+              <a 
+                href="https://www.instagram.com/slb_overseas_jodhpur/?hl=en" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all"
+              >
                 <Instagram className="w-[18px] h-[18px] md:w-5 md:h-5" />
               </a>
-              <a href="#" className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all">
-                <Globe className="w-[18px] h-[18px] md:w-5 md:h-5" />
+              <a 
+                href="https://www.facebook.com/profile.php?id=61588170375475" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all"
+              >
+                <Facebook className="w-[18px] h-[18px] md:w-5 md:h-5" />
+              </a>
+              <a 
+                href="https://www.linkedin.com/company/slb-overseas/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all"
+              >
+                <Linkedin className="w-[18px] h-[18px] md:w-5 md:h-5" />
+              </a>
+              <a 
+                href="https://in.pinterest.com/slboverseas2025/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all"
+              >
+                <svg 
+                  viewBox="0 0 24 24" 
+                  fill="currentColor" 
+                  className="w-[18px] h-[18px] md:w-5 md:h-5"
+                >
+                  <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.965 1.406-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.261 7.929-7.261 4.162 0 7.398 2.967 7.398 6.93 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/>
+                </svg>
               </a>
             </div>
           </div>
