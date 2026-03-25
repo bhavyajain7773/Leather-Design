@@ -77,7 +77,7 @@ const AboutPage: React.FC = () => {
             <div className="flex flex-col gap-2">
               <Mail className="opacity-20 mb-2" size={20}/>
               <span className="text-[9px] md:text-[10px] font-black uppercase tracking-widest opacity-40">Email</span>
-              <p className="text-base md:text-lg font-semibold break-all">slboverseas2025@gmail.com</p>
+              <p className="text-base md:text-lg font-semibold break-all">business@slboverseasexim.com</p>
             </div>
             <div className="flex flex-col gap-2">
               <Phone className="opacity-20 mb-2" size={20}/>
@@ -87,7 +87,7 @@ const AboutPage: React.FC = () => {
             <div className="flex flex-col gap-2">
               <MapPin className="opacity-20 mb-2" size={20}/>
               <span className="text-[9px] md:text-[10px] font-black uppercase tracking-widest opacity-40">Factory Address</span>
-              <p className="text-base md:text-lg font-semibold">J-231 Pratap Nagar, Jodhpur, India.</p>
+              <p className="text-base md:text-lg font-semibold">J-231 Pratap Nagar, Jodhpur, Rajasthan, India.</p>
             </div>
           </div>
           

@@ -21,7 +21,7 @@ const Footer: React.FC<FooterProps> = ({ setView }) => {
               <span className="text-[20px] md:text-[24px] font-black uppercase tracking-widest-custom text-white">Overseas</span>
             </div>
             <p className="text-neutral-400 text-base md:text-xl max-w-sm leading-relaxed mb-8 md:mb-12 font-inter font-light">
-              Premium manufacturer and exporter of leather artifacts from Jodhpur to Germany.
+              Premium manufacturer and exporter of leather artifacts from Jodhpur to Germany, EU, USA & Canada.
             </p>
             <div className="flex flex-wrap gap-4 md:gap-6">
               <a 
@@ -116,7 +116,7 @@ const Footer: React.FC<FooterProps> = ({ setView }) => {
             <ul className="space-y-6 md:space-y-8 text-[11px] md:text-sm font-semibold uppercase tracking-widest-custom">
               <li className="flex flex-col gap-1 md:gap-2">
                  <span className="text-[9px] md:text-[10px] text-neutral-600">Email</span>
-                 <a href="mailto:slboverseas2025@gmail.com" className="hover:text-neutral-400 normal-case text-base md:text-lg break-all">slboverseas2025@gmail.com</a>
+                 <a href="mailto:business@slboverseasexim.com" className="hover:text-neutral-400 normal-case text-base md:text-lg break-all">business@slboverseasexim.com</a>
               </li>
               <li className="flex flex-col gap-1 md:gap-2">
                  <span className="text-[9px] md:text-[10px] text-neutral-600">Phone</span>

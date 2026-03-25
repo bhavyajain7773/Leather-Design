@@ -110,7 +110,7 @@ const Header: React.FC<HeaderProps> = ({ setView, currentView }) => {
 
           <div className="mt-auto pb-12 border-t border-neutral-100 pt-8">
             <div className="flex flex-col space-y-2">
-              <a href="mailto:slboverseas2025@gmail.com" className="text-xs font-semibold text-neutral-500">slboverseas2025@gmail.com</a>
+              <a href="mailto:business@slboverseasexim.com" className="text-xs font-semibold text-neutral-500">business@slboverseasexim.com</a>
               <a href="tel:+917793003465" className="text-xs font-semibold text-neutral-500">+91 7793003465</a>
             </div>
             <p className="mt-6 text-[9px] font-black uppercase tracking-widest-custom text-neutral-300">© 2025 SLB OVERSEAS</p>

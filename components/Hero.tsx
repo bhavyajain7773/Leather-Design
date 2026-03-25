@@ -11,7 +11,7 @@ const Hero: React.FC<HeroProps> = ({ onOEMRequest }) => {
       <div className="max-w-7xl mx-auto px-6 flex flex-col items-center text-center">
         <div className="inline-flex items-center space-x-2 px-3 md:px-4 py-2 bg-neutral-100 border border-black/5 rounded-full mb-6 md:mb-8 animate-reveal" style={{ animationDelay: '0.1s' }}>
           <Globe size={10} className="md:size-3 text-black" />
-          <span className="text-[9px] md:text-[11px] font-semibold uppercase tracking-widest-custom text-black">Exclusively Exporting to Germany, US , Canada</span>
+          <span className="text-[9px] md:text-[11px] font-semibold uppercase tracking-widest-custom text-black">Exclusively Exporting to Germany, EU, USA & Canada</span>
         </div>
 
         <h1 className="text-[36px] sm:text-[42px] md:text-[52px] lg:text-[64px] font-black leading-[1.1] tracking-tight-custom mb-6 md:mb-10 animate-reveal" style={{ animationDelay: '0.2s' }}>
@@ -23,7 +23,7 @@ const Hero: React.FC<HeroProps> = ({ onOEMRequest }) => {
         
         <div className="max-w-2xl mb-8 md:mb-12 animate-reveal" style={{ animationDelay: '0.3s' }}>
           <p className="text-[#666666] text-sm md:text-base font-medium leading-relaxed font-inter mx-auto px-4 md:px-0">
-            From the heritage looms of Jodhpur to the elite boutiques of Germany. SLB OVERSEAS translates centuries of artisanal leather mastery into precision-engineered artifacts for the global professional.
+            From the heritage looms of Jodhpur to the elite boutiques of Germany, EU, USA & Canada. SLB OVERSEAS translates centuries of artisanal leather mastery into precision-engineered artifacts for the global professional.
           </p>
         </div>
 

@@ -61,7 +61,7 @@ const LocationSection: React.FC = () => {
                 <div>
                   <p className="text-[9px] md:text-[10px] font-black uppercase tracking-widest-custom text-black/30 mb-0.5 md:mb-1">Our Facility</p>
                   <p className="text-xs md:text-sm font-bold leading-relaxed max-w-xs group-hover:underline decoration-black/20 underline-offset-4">
-                    J-231 Pratap Nagar, Jodhpur, India.
+                    J-231 Pratap Nagar, Jodhpur, Rajasthan, India.
                   </p>
                 </div>
               </a>
@@ -84,20 +84,29 @@ const LocationSection: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-[9px] md:text-[10px] font-black uppercase tracking-widest-custom text-black/30 mb-0.5 md:mb-1">Digital Correspondence</p>
-                  <a href="mailto:slboverseas2025@gmail.com" className="text-xs md:text-sm font-bold hover:underline decoration-black/20 underline-offset-4 break-all">
-                    slboverseas2025@gmail.com
+                  <a href="mailto:business@slboverseasexim.com" className="text-xs md:text-sm font-bold hover:underline decoration-black/20 underline-offset-4 break-all">
+                    business@slboverseasexim.com
                   </a>
                 </div>
               </div>
             </div>
 
             <div className="mt-8 md:mt-10 pt-6 md:pt-8 border-t border-black/10 flex items-center gap-3 md:gap-4">
-              <div className="flex shrink-0">
-                <div className="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-white bg-neutral-100 overflow-hidden shadow-sm">
+              <div className="flex shrink-0 -space-x-2">
+                <div className="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-white bg-neutral-100 overflow-hidden shadow-sm z-40">
                    <img src="https://flagcdn.com/w80/de.png" alt="Germany" className="w-full h-full object-cover" />
                 </div>
+                <div className="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-white bg-neutral-100 overflow-hidden shadow-sm z-30">
+                   <img src="https://flagcdn.com/w80/us.png" alt="USA" className="w-full h-full object-cover" />
+                </div>
+                <div className="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-white bg-neutral-100 overflow-hidden shadow-sm z-20">
+                   <img src="https://flagcdn.com/w80/eu.png" alt="EU" className="w-full h-full object-cover" />
+                </div>
+                <div className="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-white bg-neutral-100 overflow-hidden shadow-sm z-10">
+                   <img src="https://flagcdn.com/w80/ca.png" alt="Canada" className="w-full h-full object-cover" />
+                </div>
               </div>
-              <p className="text-[8px] md:text-[10px] font-black uppercase tracking-widest-custom text-black/30 leading-tight">Port Shipments: Germany (Hamburg, Bremerhaven)</p>
+              <p className="text-[8px] md:text-[10px] font-black uppercase tracking-widest-custom text-black/30 leading-tight">Global Shipments: Germany, EU, USA & Canada</p>
             </div>
           </div>
 

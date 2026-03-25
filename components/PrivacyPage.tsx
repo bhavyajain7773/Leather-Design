@@ -54,7 +54,7 @@ const PrivacyPage: React.FC = () => {
           <section>
             <h2 className="text-2xl font-bold text-black mb-4">5. Contact Us</h2>
             <p>
-              If you have any questions about this privacy policy or our privacy practices, please contact us at: slboverseas2025@gmail.com
+              If you have any questions about this privacy policy or our privacy practices, please contact us at: business@slboverseasexim.com
             </p>
           </section>
         </div>

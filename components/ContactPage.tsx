@@ -16,7 +16,7 @@ const ContactPage: React.FC = () => {
     setIsSubmitting(true);
 
     // Constructing the Gmail Compose URL
-    const recipient = "slboverseas2025@gmail.com";
+    const recipient = "business@slboverseasexim.com";
     const subject = encodeURIComponent(formData.subject || "Export Inquiry - SLB Overseas");
     const bodyContent = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
     const body = encodeURIComponent(bodyContent);
@@ -137,7 +137,7 @@ const ContactPage: React.FC = () => {
                   <div className="flex items-center gap-2 mt-4 opacity-30">
                     <div className="w-1 h-1 rounded-full bg-black" />
                     <p className="text-[8px] font-black uppercase tracking-widest-custom text-black">
-                      Direct Dispatch: slboverseas2025@gmail.com
+                      Direct Dispatch: business@slboverseasexim.com
                     </p>
                   </div>
                 </form>
@@ -173,7 +173,7 @@ const ContactPage: React.FC = () => {
               <div className="p-6 md:p-8 bg-white border border-black/5 rounded-[24px] md:rounded-[32px] hover:shadow-lg transition-all">
                 <Mail className="text-black/20 mb-4 md:mb-6 w-[18px] h-[18px] md:w-5 md:h-5" />
                 <p className="text-[9px] md:text-[10px] font-black uppercase tracking-widest-custom text-black/30 mb-2">Email Desk</p>
-                <p className="text-base md:text-lg font-bold break-all">slboverseas2025@gmail.com</p>
+                <p className="text-base md:text-lg font-bold break-all">business@slboverseasexim.com</p>
               </div>
             </div>
 
@@ -183,8 +183,7 @@ const ContactPage: React.FC = () => {
                 <div>
                   <p className="text-[9px] md:text-[10px] font-black uppercase tracking-widest-custom text-black/30 mb-2">Manufacturing Unit & HQ</p>
                   <p className="text-base md:text-lg font-bold leading-relaxed">
-                    J-231 Pratap Nagar, Jodhpur,<br />
-                    Rajasthan, India - 342001
+                    J-231 Pratap Nagar, Jodhpur, Rajasthan, India.
                   </p>
                 </div>
               </div>
